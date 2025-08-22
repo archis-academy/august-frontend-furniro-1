@@ -1,8 +1,16 @@
+$primary-color: #3498db;
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: $primary-color;
+
+  .title {
+    font-size: 2rem;
+    color: white;
+  }
 }
 
 .logo {
