@@ -1,10 +1,12 @@
+import { Router } from './router';
 import { useState } from 'react';
-import './App.scss';
 import { SignUp } from './Components/SignUp/SignUp.jsx';
+import './App.scss';
 
 function App() {
   return (
     <>
+      <Router />
       <SignUp />
     </>
   );
