@@ -10,6 +10,8 @@ function Login() {
                     id="email" 
                     name="email"
                     type="email"
+                    placeholder='Abc@def.com'
+                    autoComplete='email'
                     required 
                     />
                     <label htmlFor="password">Password</label>
@@ -17,22 +19,24 @@ function Login() {
                     id="password"
                     name="password"
                     type="password"
+                    placeholder='********'
+                    autoComplete='current-password'
                     required 
                     />
                     <div className='or'>- OR -</div>
                     <div className='social-buttons'>
                         <button type='button' className='social-button'>
-                            <img src="/icons/Google.png" alt="google icon" />
+                            <img src="/icons/GitHub.png" alt="google icon" />
                             <span>Sign up with GitHub</span>
                         </button>
                         <button type='button' className='social-button'>
-                            <img src="src/login/icons/GitHub.png" alt="github icon" />
+                            <img src="/icons/Google.png" alt="github icon" />
                             <span>Sign up with Google</span>
                         </button>
                     </div>
-                    <div type='submit' className='submit-button'>
+                    <button type='submit' className='submit-button'>
                         Login
-                    </div>
+                    </button>
                 </form>
             </main>
     );
