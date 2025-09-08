@@ -1,9 +1,35 @@
 import './login.scss';
+import { useState } from 'react';
 
 function Login() {
+    const [form, setForm] = useState({ email: "", password: "" });
+
+    const onChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        const emailValid = /\S+@\S+\.\S+/.test(form.email);
+        const passwordValid = form.password.length >= 8 && /[A-Z]/.test(form.password);
+
+        if (!emailValid) {
+        alert("Lütfen geçerli bir e-posta adresi giriniz.");
+        return;
+        }
+
+        if (!passwordValid) {
+        alert("Şifre en az 8 karakterli ve 1 büyük harf içermeli.");
+        return;
+        }
+
+        alert("Login başarılı!");
+        console.log("Login başarılı:", form);
+    };
     return (
             <main className='login-page'>
-                <form className='login-card'>
+                <form onSubmit={onSubmit} className='login-card'>
                     <h1>Login</h1>
                     <label htmlFor="email">Email adress</label>
                     <input 
@@ -13,6 +39,8 @@ function Login() {
                     placeholder='Abc@def.com'
                     autoComplete='email'
                     required 
+                    onChange={onChange}
+                    value={form.email}
                     />
                     <label htmlFor="password">Password</label>
                     <input 
@@ -21,7 +49,9 @@ function Login() {
                     type="password"
                     placeholder='********'
                     autoComplete='current-password'
-                    required 
+                    required
+                    onChange={onChange}
+                    value={form.password}
                     />
                     <div className='or'>- OR -</div>
                     <div className='social-buttons'>
