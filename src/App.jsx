@@ -1,8 +1,14 @@
-import { Router } from './router'
-import './App.scss';
+import Navbar from "./components/Navbar/navbar.jsx";
+import { Router } from "./router";
+import "./App.scss";
 
 function App() {
-  return <Router />
+  return (
+    <>
+      <Navbar />
+      <Router />
+    </>
+  );
 }
 
 export default App;
