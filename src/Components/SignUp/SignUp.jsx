@@ -1,36 +1,71 @@
 import React from 'react';
 import github from '../../images/SignUp/github_icon.svg';
 import google from '../../images/SignUp/google_icon.svg';
-import '../SignUp/SignUp.scss';
+import styles from './SignUp.module.scss';
 
 export const SignUp = () => {
   return (
-    <div className="signUpContainer">
-      <div className="ortxt">- OR -</div>
-      <div className="buttons">
-        <button className="githubBtn">
-          <div className="githubIcon">
-            <img src={github} alt="github-icon" />
-          </div>
-          <div className="githubTxt">Sign up with Github </div>
-        </button>
-        <button className="googleBtn">
-          <div className="googleIcon">
-            <img src={google} alt="google-icon" />
-          </div>
-          <div className="googleTxt">Sing up with Google</div>
-        </button>
-      </div>
+    <>
+      <div className={styles.signUpContainer}>
+        <h1 className={styles.title}>Create your Free Account</h1>
 
-      <div className="loginPrompt">
-        Already have a account?{' '}
-        <a className="loginLink" href="#">
-          Log in
-        </a>
+        <form className={styles.form}>
+          <label className={styles.label}>Full name</label>
+          <input
+            type="text"
+            placeholder="John Doe"
+            className={styles.input}
+            autoComplete="name"
+          />
+
+          <label className={styles.label}>Email address</label>
+          <input
+            type="email"
+            placeholder="Abc@def.com"
+            className={styles.input}
+            autoComplete="email"
+          />
+
+          <label className={styles.label}>Password</label>
+          <input
+            type="password"
+            placeholder="********"
+            className={styles.input}
+            autoComplete="new-password"
+          />
+
+          <div className={styles.orTxt}>- OR -</div>
+
+          <div className={styles.buttons}>
+            <button type="button" className={styles.githubBtn}>
+              <span className={styles.githubIcon}>
+                <img src={github} alt="GitHub icon" />
+              </span>
+              <span className={styles.githubTxt}>Sign up with GitHub</span>
+            </button>
+
+            <button type="button" className={styles.googleBtn}>
+              <span className={styles.googleIcon}>
+                <img src={google} alt="Google icon" />
+              </span>
+              <span className={styles.googleTxt}>Sign up with Google</span>
+            </button>
+          </div>
+
+          <div className={styles.loginPrompt}>
+            Already have an account?{' '}
+            <a className={styles.loginLink} href="#">
+              Log in
+            </a>
+          </div>
+
+          <div className={styles.createAccount}>
+            <button type="submit" className={styles.createAccountBtn}>
+              Create Account
+            </button>
+          </div>
+        </form>
       </div>
-      <div className="createAccount">
-        <button className="createAccountBtn">Create Account</button>
-      </div>
-    </div>
+    </>
   );
 };
