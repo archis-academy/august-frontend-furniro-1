@@ -1,43 +1,69 @@
-.navContainer{
-    max-width:1440px;
+/* Navbar Container */
+.navContainer {
+    max-width: 1440px;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* navbar'ı en üste sabitle */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* altındaki yazılar görünmesin diye */
+    z-index: 1000;
+    padding: 0 20px; /* sağ-sol boşluk */
 }
-.title{
-    width: 139px;
-    height: 41px;
-    font-size:34px;
+
+/* Başlık */
+.title {
+    font-size: 34px;
     font-family: "Montserrat", sans-serif;
-    margin-left:5px;
+    margin-left: 5px;
 }
-.navLinks, .navIcons, .navTitle{
+
+/* Linkler, ikonlar ve başlık iç düzeni */
+.navLinks, .navIcons, .navTitle {
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    padding:50px;
+    align-items: center;
+    padding: 20px; /* padding küçültüldü */
 }
-.navLinks{
-    width:430px;
-    font-size:16px;
+
+/* Linkler */
+.navLinks {
+    width: 430px;
+    font-size: 16px;
     font-family: "Poppins", sans-serif;
-    cursor: pointer; 
-}
-.icon{
-    padding:25px;
     cursor: pointer;
 }
+
+/* İkon */
+.icon {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .navLinks{
-    display:none;
+  .navLinks {
+    display: none;
   }
 }
+
 @media (max-width: 480px) {
-  .navContainer{
+  .navContainer {
      flex-direction: column;
+     height: auto; /* sabit yüksekliği kaldırdık */
+     padding: 10px;
   }
-  .navIcons, .navTitle{
-    padding:10px;
+  .navIcons, .navTitle {
+    padding: 10px;
   }
+}
+
+/* Body boşluk (navbar alta taşmasın) */
+body {
+  padding-top: 100px; /* navbar yüksekliği kadar */
 }
