@@ -1,51 +1,46 @@
-/* Navbar Container */
 .navContainer {
-    max-width: 1440px;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    /* navbar'ı en üste sabitle */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white; /* altındaki yazılar görünmesin diye */
-    z-index: 1000;
-    padding: 0 20px; /* sağ-sol boşluk */
+  max-width: 1440px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  padding: 0 20px;
 }
 
-/* Başlık */
 .title {
-    font-size: 34px;
-    font-family: "Montserrat", sans-serif;
-    margin-left: 5px;
+  font-size: 34px;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 5px;
 }
 
-/* Linkler, ikonlar ve başlık iç düzeni */
-.navLinks, .navIcons, .navTitle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px; /* padding küçültüldü */
+.navLinks,
+.navIcons,
+.navTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-/* Linkler */
 .navLinks {
-    width: 430px;
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    cursor: pointer;
+  width: 430px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* İkon */
 .icon {
-    padding: 10px;
-    cursor: pointer;
+  padding: 10px;
+  cursor: pointer;
 }
-
-/* Responsive */
+.link{
+  cursor:pointer;
+}
 @media (max-width: 768px) {
   .navLinks {
     display: none;
@@ -54,16 +49,16 @@
 
 @media (max-width: 480px) {
   .navContainer {
-     flex-direction: column;
-     height: auto; /* sabit yüksekliği kaldırdık */
-     padding: 10px;
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
   }
-  .navIcons, .navTitle {
+  .navIcons,
+  .navTitle {
     padding: 10px;
   }
 }
 
-/* Body boşluk (navbar alta taşmasın) */
 body {
-  padding-top: 100px; /* navbar yüksekliği kadar */
+  padding-top: 100px;
 }

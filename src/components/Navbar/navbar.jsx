@@ -14,16 +14,16 @@ function Navbar() {
             </div>
         </div>
         <div className={styles.navLinks}>
-           <div>
+           <div className={styles.link}>
              <p>Home</p>
            </div>
-           <div>
+           <div className={styles.link}>
              <p>Shop</p>
            </div>
-           <div>
+           <div className={styles.link}>
              <p>About</p>
            </div>
-           <div>
+           <div className={styles.link}>
                <p>Contact</p>
            </div>
         </div>
