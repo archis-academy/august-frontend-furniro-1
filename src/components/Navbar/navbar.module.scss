@@ -11,6 +11,7 @@
   background-color: white;
   z-index: 1000;
   padding: 0 20px;
+  background-color: aqua;
 }
 
 .title {
@@ -57,8 +58,14 @@
   .navTitle {
     padding: 10px;
   }
+  .navIcons{
+    margin-left:30px;
+  }
 }
 
 body {
   padding-top: 100px;
+}
+.navIcons{
+  margin-right:25px;
 }
