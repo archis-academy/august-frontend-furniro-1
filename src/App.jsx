@@ -1,11 +1,12 @@
+import { Router } from './router';
+import { useState } from 'react';
+import { SignUp } from './Components/SignUp/SignUp.jsx';
+import './App.scss';
 import Navbar from "./components/Navbar/navbar.jsx";
-import { Router } from "./router";
-import "./App.scss";
-
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar /> 
       <Router />
     </>
   );
