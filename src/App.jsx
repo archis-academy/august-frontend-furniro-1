@@ -4,12 +4,13 @@ import { SignUp } from './Components/SignUp/SignUp.jsx';
 import './App.scss';
 import Navbar from "./components/Navbar/navbar.jsx";
 import Input from "./components/Input/input.jsx"
+import Form from "./components/Form/form.jsx"
 
 function App() {
 
   return (
     <>
-      <Input label="Email" placeholder="Enter your Emaiil here" type='email'/>
+      <Form/>
       <Navbar /> 
       <Router />
     </>
