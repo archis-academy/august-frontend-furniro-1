@@ -1,0 +1,27 @@
+.btn {
+    border: none;
+    cursor: pointer;
+}
+
+.btn.Primary {
+    width: 60px;
+    height: 60px;
+    background: #B88E2F;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn.Secondary {
+    width: 60px;
+    height: 60px;
+    background: #FCF8F3;
+    color: #3A3A3A;
+    border-radius: 10px;
+}
+.btn.show {
+    width: 245px;
+    background: #FFFFFF;
+    color: #B88E2F;
+    border: 1px solid #B88E2F;
+    border-radius: 0px;
+}
