@@ -55,7 +55,7 @@ export const SignUp = () => {
 
           <div className={styles.loginPrompt}>
             Already have an account?{' '}
-            <a className={styles.loginLink} href="#">
+            <a className={styles.loginLink} href="/login">
               Log in
             </a>
           </div>
