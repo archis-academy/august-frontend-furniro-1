@@ -1,27 +1,41 @@
 .btn {
     border: none;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
-
-.btn.Primary {
-    width: 60px;
-    height: 60px;
+.btn:focus {
+    outline: none;
+}
+.btn:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.btn.primary {
+    width: fit-content;
     background: #B88E2F;
     color: white;
     border-radius: 10px;
+    font-size: 20px;
 }
-
-.btn.Secondary {
-    width: 60px;
-    height: 60px;
+.btn.secondary {
+    width: fit-content;
     background: #FCF8F3;
     color: #3A3A3A;
     border-radius: 10px;
+    font-size: 20px;
 }
-.btn.show {
-    width: 245px;
+.btn.tertiary {
+    width: fit-content;
     background: #FFFFFF;
     color: #B88E2F;
     border: 1px solid #B88E2F;
     border-radius: 0px;
+    font-size: 16px;
+}
+.btn.quaternary {
+    width: fit-content;
+    background: #B88E2F;
+    color: #FFFFFF;
+    border-radius: 0px;
+    font-size: 16px;
 }

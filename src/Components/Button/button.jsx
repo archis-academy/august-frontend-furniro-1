@@ -1,10 +1,12 @@
 import React from 'react'
 import './button.scss'
 
-function Buttons({text, type}) {
+function Buttons({text, variant ='primary', onClick}) {
     return (
         <>
-            <button className={`btn ${type}`}>{text}</button>
+            <button className={`btn ${variant}`} onClick={onClick}>
+                {text}
+            </button>
         </>
     )
 }

@@ -3,9 +3,10 @@ import Buttons from "./button";
 export default function ButtonDemo() {
     return (
         <>
-            <Buttons type = "Primary" text = "1" />
-            <Buttons type = "Secondary" text = "2" />
-            <Buttons type = "show" text = "Show More" />
+            <Buttons variant="primary" text="1" />
+            <Buttons variant="secondary" text="2" />
+            <Buttons variant="tertiary" text="Show More" />
+            <Buttons variant="quaternary" text="Add to Cart" />
         </>
     )
 }
