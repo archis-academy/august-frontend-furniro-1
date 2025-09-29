@@ -1,0 +1,68 @@
+.explore-section-carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    border: 2px solid red;
+
+    .swiper {
+        width: 100%;
+        padding-bottom: 3rem;
+    }
+
+    .swipper-pagination {
+        position: absolute;
+        bottom: 50%;
+        right: 20px;
+        transform: translateY(50%);
+        gap: 8px;
+    }
+
+    // .card {
+    //     overflow: hidden;
+    //     transform: scale(1);
+    //     opacity: .8;
+    //     transition: transform .35s ease, opacity .35s ease, box-shadow .35s ease;
+    // }
+
+    .swiper-slide-active .card {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .swiper-slide-prev .card,
+    .swiper-slide-next .card {
+        transform: scale(.70);
+        opacity: .7;
+    }
+
+    img {
+        display: block;
+        width: 500px;
+        height: 580px;
+        object-fit: cover;
+    }
+
+    .swiper-pagination-bullet {
+        background: #d1c6ae;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #b88e2f;
+    }
+
+    .rooms-slide {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 500px;
+        height: 580px;
+    }
+
+    .explore-card {
+        position: absolute;
+        z-index: 10;
+        border: 2px solid red;
+    }
+
+}
