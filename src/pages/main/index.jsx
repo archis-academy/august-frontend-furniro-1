@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { ExploreMoreSection, HeroSection } from '../../Sections';
+
 
 export const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <HeroSection />
+      <ExploreMoreSection />
+    </div>
+  );
+};

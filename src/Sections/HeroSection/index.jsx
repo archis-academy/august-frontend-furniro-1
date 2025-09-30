@@ -1,4 +1,4 @@
-import Buttons from '../Button/button'
+import Buttons from '../../Components/Button/button'
 import './hero.scss'
 
 
