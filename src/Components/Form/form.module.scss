@@ -1,0 +1,46 @@
+.container {
+  width: 1030px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+.form {
+  display: flex;
+  gap: 50px;
+}
+.infos {
+  width: 264px;
+  height: 384px;
+  text-align: start;
+  margin: 40px;
+}
+.name {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+.info {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+p {
+  margin: 0;
+}
+.contact {
+  width: 644px;
+  height: 240px;
+}
+.contactTitle{
+    font-size:36px;
+    font-weight:600;
+}
+.contactText{
+    color:#ACACAC;
+}
