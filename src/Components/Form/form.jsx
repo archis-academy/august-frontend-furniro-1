@@ -1,5 +1,5 @@
 import styles from './form.module.scss';
-import Input from '../Input/input.jsx';
+import Input from '../Input/index.jsx';
 import '@fontsource/poppins';
 
 function form() {
