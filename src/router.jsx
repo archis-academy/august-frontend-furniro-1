@@ -5,6 +5,7 @@ import Login from './pages/login'
 import { Home } from './pages/main';
 import Carousel from './Components/Carousel';
 import ExploreCard from './Components/ExploreCard';
+import { ExploreMoreSection } from './Sections';
 
 
 export const Router = () => {
@@ -14,7 +15,7 @@ export const Router = () => {
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path='/swiper' element={<Carousel />} />
+        <Route path='/explore' element={<ExploreMoreSection />} />
       </Routes>
     </BrowserRouter>
   );

@@ -6,8 +6,10 @@ const ExploreCard = ({ data }) => {
 
     return (
         <div className='explore-card'>
-            <span>{`0${data.id} —— ${data.room}`}</span>
-            <h3>{data.title}</h3>
+            <div className='explore-text'>
+                <span>{`0${data.id} —— ${data.room}`}</span>
+                <h5>{data.title}</h5>
+            </div>
             <div className='explore-card-button'>
                 <Buttons variant="quaternary" text="→" />
             </div>
