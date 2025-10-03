@@ -1,0 +1,95 @@
+.explore-section-carousel {
+    max-width: 800px;
+    margin: 50px auto 0;
+    position: relative;
+    .swiper-pagination {
+        position: absolute;
+        bottom: 60px;
+        right: 140px;
+        left: auto;
+        transform: none;
+        text-align: right;
+    }
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        transform-origin: top center;
+        margin-bottom: 50px;
+    }
+    .swiper-slide-prev,
+    .swiper-slide-next {
+        transform: scale(0.9, 0.9);
+        opacity: 0.5;
+    }
+    .swiper-slide-active .card {
+        scale: (1.5,1.2);
+    }
+    .swiper-button-prev {
+        display: none;
+    }
+    .swiper-navigation-icon {
+        width: 15px;
+        height: 15px;
+    }
+    .swiper-button-next {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 14px 1px #00000029;
+        width: 48px;
+        height: 48px;
+        border-radius: 100px;  
+        color: #B88E2F;
+        font-size: 10px;
+    }
+    .card {
+        position: relative;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-pagination-bullet {
+        background: #d1c6ae;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background: #b88e2f;
+    }
+    .explore-card {
+        position: absolute;
+        left: 5px;
+        bottom: 8px;
+        z-index: 10;
+        padding: 10px;
+        width: clamp(220px, 28vw, 320px);
+        display: flex;
+        align-items: end;
+        opacity: 0;
+    }
+    .swiper-slide-active .explore-card {
+        opacity: 1;
+    }
+    .explore-card {
+        .explore-text {
+            width: 200px;
+            height: 90px;
+            background: #F1F1F1;
+            backdrop-filter: blur(3px);
+            padding: 10px;
+            align-items: center;
+        }
+        span {
+            font-size: 16px;
+            color: #ACACAC;
+            margin: 0;
+        }
+        h5 {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 2px;
+        }
+        .explore-card-button {
+            display: inline;
+        }
+    }
+}
