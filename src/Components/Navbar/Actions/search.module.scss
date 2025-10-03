@@ -1,0 +1,21 @@
+
+.container {
+  position: absolute;
+  top: calc(100% + 5px); 
+  right: 0; 
+  padding: 20px;
+  z-index: 1000;
+}
+.input{
+    width:600px;
+    height:60px;
+    border-radius:15px;
+    border: 1px solid #ACACAC;
+    padding-left:4%;
+}
+.icon {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin:10px;
+}

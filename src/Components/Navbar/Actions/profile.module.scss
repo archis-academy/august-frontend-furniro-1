@@ -1,0 +1,19 @@
+
+.container {
+  width: 417px;
+  height: 741px;
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0; 
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  z-index: 1000;
+}
+.icon {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin:10px;
+}

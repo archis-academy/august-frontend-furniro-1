@@ -1,6 +1,10 @@
 import styles from "./navbar.module.scss";
 import "@fontsource/montserrat/700.css";
 import "@fontsource/poppins";
+import ShoppingCard from "./Actions/shoppingCard";
+import Favorites from "./Actions/favorites";
+import Search from "./Actions/search";
+import Profile from "./Actions/profile";
 
 function Navbar() {
   return (
@@ -28,18 +32,10 @@ function Navbar() {
            </div>
         </div>
         <div className={styles.navIcons}>
-           <div className={styles.icon}>
-              <img src="assets/navbar/profile.svg" alt="profile icon" />
-           </div>
-           <div className={styles.icon}>
-              <img src="assets/navbar/search.svg" alt="search icon" />
-           </div>
-           <div className={styles.icon}>
-               <img src="assets/navbar/like.svg" alt="like icon" />
-           </div>
-           <div className={styles.icon}>
-             <img src="assets/navbar/basket.svg" alt="basket icon" />
-           </div>
+           <Profile/>
+           <Search/>
+          <Favorites/>    
+          <ShoppingCard/>
         </div>
     </div>
   )

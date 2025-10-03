@@ -1,5 +1,4 @@
 import styles from './input.module.scss';
-// import '@fontsource/poppins';
 
 function input({ label, placeholder, type = 'text' }) {
   return (
