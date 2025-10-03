@@ -1,15 +1,15 @@
 
-import { useState } from 'react';
+
 import styles from './search.module.scss';
 
-function Search() {
-  const [toggle, setToggle] = useState(false);
+function Search({ toggle, setToggle }) {
+
 
   return (
     <div>
-      <div className={styles.icon} onClick={() => setToggle(!toggle)}>
+      <div className={styles.icon} onClick={() => (toggle === "search" ? setToggle(null) : setToggle("search"))}>
         <img src="assets/navbar/search.svg" alt="search icon" />
-        {toggle && (
+        {toggle === "search" && (
           <div className={styles.container}>
                   <input className={styles.input} type="text" placeholder="What are you looking for?" />
           </div>
