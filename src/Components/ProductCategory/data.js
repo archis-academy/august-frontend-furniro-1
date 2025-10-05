@@ -1,56 +1,26 @@
 export const categories = [
     {
-        id: "living-room",
-        label: "Living Room",
-        options: [
-            { id: "sofas-and-sectionals", label: "Sofas and Sectionals" },
-            { id: "desks-and-chairs", label: "Desks and Chairs" },
-            { id: "tv-units", label: "TV Units" },
-        ],
+        title: "Living Room",
+        options: ["Sos and Sectiofanals","Desks and Chairs", "TV Units"]
     },
     {
-        id: "bedroom",
-        label: "Bedroom",
-        options: [
-            { id: "beds", label: "Beds" },
-            { id: "wardrobes", label: "Wardrobes" },
-            { id: "nightstands", label: "Nightstands" },
-        ],
+        title: "Bedroom",
+        options: ["Beds","Wardrobes","Nightstands"]
     },
     {
-        id: "dining-room",
-        label: "Dining Room",
-        options: [
-            { id: "dining-tables", label: "Dining Tables" },
-            { id: "dining-chairs", label: "Dining Chairs" },
-            { id: "sideboards", label: "Sideboards" },
-        ],
+        title: "Dining Room",
+        options: ["Dining Tables","Dining Chairs","Sideboards"]
     },
     {
-        id: "home-office",
-        label: "Home Office",
-        options: [
-            { id: "office-desks", label: "Office Desks" },
-            { id: "ergonomic-chairs", label: "Ergonomic Chairs" },
-            { id: "bookcases", label: "Bookcases" },
-        ],
+        title: "Home Office",
+        options: ["Office Desks","Ergonomic Chairs","Bookcases"]
     },
     {
-        id: "outdoor",
-        label: "Outdoor",
-        options: [
-            { id: "patio-sets", label: "Patio Sets" },
-            { id: "outdoor-chairs", label: "Outdoor Chairs" },
-            { id: "garden-tables", label: "Garden Tables" },
-        ],
+        title: "Outdoor",
+        options: ["Patio Sets","Outdoor Chairs","Garden Tables"]
     },
     {
-        id: "kids-room",
-        label: "Kids Room",
-        options: [
-            { id: "bunk-beds", label: "Bunk Beds" },
-            { id: "toy-storage", label: "Toy Storage" },
-            { id: "study-desks", label: "Study Desks" },
-        ],
+        title: "Kids Room",
+        options: ["Bunk Beds","Toy Storage","Study Desks"]
     },
 ];
