@@ -1,18 +1,17 @@
 import { bestSellers } from "./data";
-
-
+import './style.scss'
 
 export const BestSellerProduct = ({ title, image, star, oldPrice, newPrice }) => {
-    const rating = Math.max(0, Math.min(5, Number(star) || 0));
-    const filledWidth = `${(rating / 5) * 100}%`;
+    const rating = Math.round(Number(star) || 0);
+
     return (
         <div className='bs-item'>
             <img className='bs-image' src={image} alt={title} />
             <div className='bs-info'>
                 <div className='bs-title'>{title}</div>
-                <div className='bs-stars' aria-label={`${rating} out of 5`}>
-                    <span className="bs-stars-bg">★★★★★</span>
-                    <span className="bs-stars-fg" style={{ width: filledWidth }}>★★★★★</span>
+                <div className="bs-stars">
+                    {"★".repeat(rating)}
+                    {"☆".repeat(5 - rating)}
                 </div>
                 <div className='bs-price'>
                     <span className='old-price'>{oldPrice}</span>
