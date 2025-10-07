@@ -1,7 +1,4 @@
 import styles from "./navbar.module.scss";
-import "@fontsource/montserrat/700.css";
-import "@fontsource/poppins";
-
 function Navbar() {
   return (
     <div className={styles.navContainer} >
