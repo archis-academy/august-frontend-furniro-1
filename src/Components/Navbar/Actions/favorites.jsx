@@ -20,7 +20,7 @@ function Favorites({ toggle, setToggle }) {
         src="assets/navbar/like.svg"
         alt="like icon"
         onClick={(e) => {
-          e.stopPropagation(); // Tıklama yukarı gitmesin
+          e.stopPropagation(); 
           toggle === "favorites" ? setToggle(null) : setToggle("favorites");
         }}
       />
@@ -28,7 +28,7 @@ function Favorites({ toggle, setToggle }) {
       {toggle === "favorites" && (
         <div
           className={styles.container}
-          onClick={(e) => e.stopPropagation()} // Popup içindeyken kapanmasın
+          onClick={(e) => e.stopPropagation()} 
         >
           <div className={styles.title}>
             Shopping Card

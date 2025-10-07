@@ -5,8 +5,6 @@ import Actions from './Actions';
 import About from "./Links/about";
  
 
-
-
 function Navbar() {
   return (
     <div className={styles.navContainer}>

@@ -1,5 +1,5 @@
 import styles from './profile.module.scss';
-import { SignUp } from '../../SignUp/SignUp';
+import { SignUp } from '../../../pages/SignUp';
 
 function Profile({ toggle, setToggle }) {
   return (
