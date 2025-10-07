@@ -2,6 +2,9 @@ import styles from './navbar.module.scss';
 import '@fontsource/montserrat/700.css';
 import '@fontsource/poppins';
 import Actions from './Actions';
+import About from "./Links/about";
+ 
+
 
 
 function Navbar() {
@@ -16,18 +19,10 @@ function Navbar() {
         </div>
       </div>
       <div className={styles.navLinks}>
-        <div className={styles.link}>
-          <p>Home</p>
-        </div>
-        <div className={styles.link}>
-          <p>Shop</p>
-        </div>
-        <div className={styles.link}>
-          <p>About</p>
-        </div>
-        <div className={styles.link}>
-          <p>Contact</p>
-        </div>
+        <About name="Home" page="/"/>
+        <About name="Shop"/>
+        <About name="About"/>
+        <About name="Contact"/>
       </div>
 
         <Actions />

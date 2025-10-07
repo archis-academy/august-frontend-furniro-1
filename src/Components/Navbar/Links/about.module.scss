@@ -1,0 +1,22 @@
+.link {
+  cursor: pointer;
+
+  a {
+    color: black;
+    text-decoration: none;
+
+    &:visited {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: gray;
+    }
+
+    &:active {
+      color: black;
+    }
+  }
+}
+

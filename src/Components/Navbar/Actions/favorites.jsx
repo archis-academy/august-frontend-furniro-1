@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import styles from './favorites.module.scss';
 
-function Favorites() {
-  const [toggle, setToggle] = useState(false);
-
+function Favorites({ toggle, setToggle }) {
   const products = [
     { id: 1, title: 'Asgaard Sofa', image: 'assets/navbar/sofa.svg' },
     { id: 2, title: 'Casaliving Wood', image: 'assets/navbar/table.svg' },
@@ -18,38 +15,51 @@ function Favorites() {
   ];
 
   return (
-    <div>
-      <div className={styles.icon} onClick={() => setToggle(!toggle)}>
-        <img src="assets/navbar/like.svg" alt="like icon" />
-        {toggle && (
-          <div className={styles.container}>
-            <div className={styles.title}>
-              Shopping Card
-              <img src="assets/navbar/lock.svg" alt="lock" />
-            </div>
-             <hr className={styles.line}></hr>
-            <div className={styles.scrollArea}>
-              {products.map((product) => (
-                <div className={styles.product1} key={product.id}>
-                  <div className={styles.image}>
-                    <img src={product.image} alt="product" />
-                  </div>
-                  <div className={styles.info}>
-                    <div>{product.title}</div>
-                  </div>
-                  <div className={styles.vector}>
-                    <img src="assets/navbar/vector.svg" alt="remove" />
-                  </div>
-                </div>
-              ))}
-            </div>
-            <hr className={styles.line}></hr>
-            <div className={styles.tabs}>
-              <p className={styles.tab}>See More</p>
-            </div>
+    <div className={styles.icon}>
+      <img
+        src="assets/navbar/like.svg"
+        alt="like icon"
+        onClick={(e) => {
+          e.stopPropagation(); // Tıklama yukarı gitmesin
+          toggle === "favorites" ? setToggle(null) : setToggle("favorites");
+        }}
+      />
+
+      {toggle === "favorites" && (
+        <div
+          className={styles.container}
+          onClick={(e) => e.stopPropagation()} // Popup içindeyken kapanmasın
+        >
+          <div className={styles.title}>
+            Shopping Card
+            <img src="assets/navbar/lock.svg" alt="lock" />
           </div>
-        )}
-      </div>
+
+          <hr className={styles.line}></hr>
+
+          <div className={styles.scrollArea}>
+            {products.map((product) => (
+              <div className={styles.product1} key={product.id}>
+                <div className={styles.image}>
+                  <img src={product.image} alt="product" />
+                </div>
+                <div className={styles.info}>
+                  <div>{product.title}</div>
+                </div>
+                <div className={styles.vector}>
+                  <img src="assets/navbar/vector.svg" alt="remove" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <hr className={styles.line}></hr>
+
+          <div className={styles.tabs}>
+            <p className={styles.tab}>See More</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
