@@ -2,8 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/main';
 import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
-import { ExploreMoreSection } from './Sections';
-import Navbar from './components/Navbar/navbar';
+
 
 export const Router = () => {
   return (
@@ -13,7 +12,6 @@ export const Router = () => {
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/explore" element={<ExploreMoreSection />} />
       </Routes>
     </BrowserRouter>
   );
