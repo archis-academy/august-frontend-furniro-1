@@ -2,8 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router';
 import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
 import { Home } from './pages/main';
-import { ExploreMoreSection } from './Sections';
-import { BestSellersList } from './Components/BestSellers';
 
 export const Router = () => {
   return (
