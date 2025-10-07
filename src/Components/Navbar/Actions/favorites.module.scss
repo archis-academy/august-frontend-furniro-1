@@ -1,0 +1,85 @@
+
+.container {
+  width: 417px;
+  height: 741px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: calc(100% + 5px);; 
+  right: 0; 
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  z-index: 1000;
+  background-color: white;
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  justify-content:space-between;
+}
+.line{
+  border: none;               
+  border-top: 1px solid #ACACAC; 
+  width: 100%; 
+  margin: 20px 0;             
+  display: block;             
+}
+.product1 {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin:20px;
+}
+.image img{
+  background-color: #D9D9D9;
+  border-radius:10px;
+}
+.scrollArea {
+  max-height: 560px; 
+  overflow-y: auto;
+  padding-right: 8px;
+  margin:15px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #D1D1D1 transparent;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+.tab {
+  border: 1px solid #3a3a3a;
+  border-radius: 25px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 12px;
+  background-color: white;
+}
+.tabs {
+  display: flex;
+  justify-content:flex-start;
+  margin-left:30px;
+}
+.vector{
+  cursor: pointer;
+}
+.icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+

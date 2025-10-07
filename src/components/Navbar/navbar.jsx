@@ -1,7 +1,12 @@
-import styles from "./navbar.module.scss";
+import styles from './navbar.module.scss';
+import '@fontsource/montserrat/700.css';
+import '@fontsource/poppins';
+import Actions from './Actions';
+import NavbarLink from './Links';
+
 function Navbar() {
   return (
-    <div className={styles.navContainer} >
+    <div className={styles.navContainer}>
       <div className={styles.navTitle}>
         <div>
           <img src="/assets/navbar/nav-icon.svg" alt="nav-icon" />
@@ -11,36 +16,15 @@ function Navbar() {
         </div>
       </div>
       <div className={styles.navLinks}>
-        <div className={styles.link}>
-          <p>Home</p>
-        </div>
-        <div className={styles.link}>
-          <p>Shop</p>
-        </div>
-        <div className={styles.link}>
-          <p>About</p>
-        </div>
-        <div className={styles.link}>
-          <p>Contact</p>
-        </div>
+        <NavbarLink name="Home" page="/" />
+        <NavbarLink name="Shop" page="/shop" />
+        <NavbarLink name="About" page="/about" />
+        <NavbarLink name="Contact" page="/contact" />
       </div>
-      <div className={styles.navIcons}>
-        <div className={styles.icon}>
-          <img src="assets/navbar/profile.svg" alt="profile icon" />
-        </div>
-        <div className={styles.icon}>
-          <img src="assets/navbar/search.svg" alt="search icon" />
-        </div>
-        <div className={styles.icon}>
-          <img src="assets/navbar/like.svg" alt="like icon" />
-        </div>
-        <div className={styles.icon}>
-          <img src="assets/navbar/basket.svg" alt="basket icon" />
-        </div>
-      </div>
+
+      <Actions />
     </div>
-  )
+  );
 }
 
 export default Navbar;
-

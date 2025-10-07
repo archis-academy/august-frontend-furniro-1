@@ -1,11 +1,13 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home } from './pages/main';
 import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
-import { Home } from './pages/main';
+
 
 export const Router = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
