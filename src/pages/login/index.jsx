@@ -1,3 +1,4 @@
+import BreadCrumb from '../../Components/BreadCrumb';
 import Buttons from '../../Components/Button/button';
 import './login.scss';
 import { useState } from 'react';
@@ -18,13 +19,19 @@ function Login() {
     }
     if (!passwordValid) {
       alert('Şifre en az 8 karakterli ve 1 büyük harf içermeli.');
-      return;   
+      return;
     }
     alert('Login başarılı!');
     console.log('Login başarılı:', form);
   };
   return (
     <main className="login-page">
+      <div style={{ padding: "30px" }}>
+      <h1>Home Page</h1>
+      <BreadCrumb rightLabel={asfdg} />
+
+      <p>Bu, breadcrumb test alanıdır. Üstte Home görünecek.</p>
+    </div>
       <form onSubmit={onSubmit} className="login-card">
         <h1>Login</h1>
         <label htmlFor="email">Email adress</label>

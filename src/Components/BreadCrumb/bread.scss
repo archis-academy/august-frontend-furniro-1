@@ -1,0 +1,29 @@
+.breadCrumb {
+    font-size: 16px;
+    color: #3A3A3A;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .current {
+        font-weight: 400;
+    }
+
+    img {
+        margin: 0px 15px;
+    }
+
+    .divider {
+        width: 1px;
+        height: 14px;
+        background: #CFCFCF;
+        margin: 0 8px;
+    }
+}
+
+.breadCrumb a:hover {
+    color: #1a1a1a;
+}
