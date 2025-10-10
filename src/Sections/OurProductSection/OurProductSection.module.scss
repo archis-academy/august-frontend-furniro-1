@@ -1,0 +1,19 @@
+.sectionContainer {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.sidePart {
+  display: flex;
+  justify-content: start;
+  min-height: 300px;
+  position: sticky;
+  top: 80px;
+}
+
+.ourProductWrap {
+  display: flex;
+  min-width: 0;
+}

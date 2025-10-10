@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './ProductCard.module.scss';
 
 function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
+  const [liked, setLiked] = useState(false);
   const totalStars = 5;
 
   return (
@@ -24,6 +25,50 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
             src="/assets/product/cardImage.svg"
             alt="Syltherine"
           />
+
+          <div className={styles.actions}>
+            <button
+              type="button"
+              className={`${styles.actionBtn} ${liked ? styles.liked : ''}`}
+              aria-label="Like"
+              aria-pressed={liked}
+              onClick={() => setLiked((v) => !v)}
+            >
+              <img
+                className={styles.likeIcon}
+                src={
+                  liked
+                    ? '/assets/product/likeIcon-filled-red.svg'
+                    : '/assets/product/likeIcon.svg'
+                }
+                alt=""
+              />
+            </button>
+
+            <button
+              type="button"
+              className={styles.actionBtn}
+              aria-label="Search"
+            >
+              <img
+                className={styles.searchIcon}
+                src="/assets/product/searchIcon.svg"
+                alt=""
+              />
+            </button>
+
+            <button
+              type="button"
+              className={styles.actionBtn}
+              aria-label="Add to cart"
+            >
+              <img
+                className={styles.shopIcon}
+                src="/assets/product/shopIcon.svg"
+                alt=""
+              />
+            </button>
+          </div>
         </div>
       </div>
 
