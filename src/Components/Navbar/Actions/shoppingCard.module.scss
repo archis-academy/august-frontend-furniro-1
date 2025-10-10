@@ -1,0 +1,82 @@
+
+.container {
+  width: 417px;
+  height: 741px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: calc(100% + 5px); 
+  right: 0; 
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  z-index: 1000;
+  background-color: white;
+}
+.icon {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin:10px;
+}
+.tab {
+  border: 1px solid #3a3a3a;
+  border-radius: 25px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 12px;
+  background-color: white;
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  justify-content:space-between;
+}
+.product1,
+.product2 {
+  display: flex;
+  justify-content:space-between;
+  margin:20px;
+}
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:10px;
+}
+.bottomSide{
+  margin:25px;
+}
+.line{
+  border: none;               
+  border-top: 1px solid #ACACAC; 
+  margin: 25px 0;             
+  display: block;  
+}
+.total{
+  display: flex;
+  justify-content: space-between;
+}
+.topSide{
+  margin:25px;
+}
+.price{
+  color:#B88E2F;
+}
+.vector{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.image img{
+  background-color: #D9D9D9;
+  border-radius:10px;
+}
