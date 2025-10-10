@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './Product.module.scss';
 
-function Product({ variant = 'ribbon', badgeText = 'NEW' }) {
+function Product({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
+  const totalStars = 5;
+
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imageWrapper}>
@@ -16,10 +18,11 @@ function Product({ variant = 'ribbon', badgeText = 'NEW' }) {
               {badgeText}
             </span>
           )}
+
           <img
             className={styles.image}
             src="/assets/product/cardImage.svg"
-            alt="resim"
+            alt="Syltherine"
           />
         </div>
       </div>
@@ -29,11 +32,14 @@ function Product({ variant = 'ribbon', badgeText = 'NEW' }) {
         <div className={styles.productDesc}>Stylish cafe chair</div>
 
         <div className={styles.productStars}>
-          <span className={styles.starFilled}>★</span>
-          <span className={styles.starFilled}>★</span>
-          <span className={styles.starFilled}>★</span>
-          <span className={styles.starFilled}>★</span>
-          <span className={styles.starEmpty}>★</span>
+          {Array.from({ length: totalStars }, (_, i) => (
+            <span
+              key={i}
+              className={i < rating ? styles.starFilled : styles.starEmpty}
+            >
+              ★
+            </span>
+          ))}
         </div>
 
         <div className={styles.prices}>
