@@ -1,0 +1,64 @@
+.bs-list {
+    width: 290px;
+    text-align: left;
+    padding: 30px;
+
+    h4 {
+        color: #3A3A3A;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+.bs-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .bs-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .bs-title {
+        color: #3A3A3A;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 120%;
+    }
+
+    .bs-stars {
+        color: #FF9900;
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    .bs-price {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        .old-price {
+            color: #ACACAC;
+            font-size: 12px;
+            text-decoration: line-through;
+        }
+
+        .new-price {
+            color: #3A3A3A;
+            font-size: 14px;
+        }
+    }
+}
+
+.bs-item:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}

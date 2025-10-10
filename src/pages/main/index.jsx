@@ -7,9 +7,6 @@ export const Home = () => {
     <div>
       <HeroSection />
       <ExploreMoreSection />
-{/* 
-      <Product variant="ribbon" badgeText="NEW" />
-      <Product variant="pill" badgeText="15%" /> */}
     </div>
   );
 };
