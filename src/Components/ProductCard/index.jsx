@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Product.module.scss';
+import styles from './ProductCard.module.scss';
 
-function Product({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
+function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
   const totalStars = 5;
 
   return (
@@ -51,4 +51,4 @@ function Product({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
   );
 }
 
-export default Product;
+export default ProductCard;
