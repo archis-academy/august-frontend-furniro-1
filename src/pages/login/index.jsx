@@ -26,12 +26,6 @@ function Login() {
   };
   return (
     <main className="login-page">
-      <div style={{ padding: "30px" }}>
-      <h1>Home Page</h1>
-      <BreadCrumb rightLabel={asfdg} />
-
-      <p>Bu, breadcrumb test alanıdır. Üstte Home görünecek.</p>
-    </div>
       <form onSubmit={onSubmit} className="login-card">
         <h1>Login</h1>
         <label htmlFor="email">Email adress</label>
@@ -69,6 +63,9 @@ function Login() {
         </div>
         <div className="submit">
           <Buttons text="Login" variant="primary" />
+        </div>
+        <div>
+          <BreadCrumb />
         </div>
       </form>
     </main>

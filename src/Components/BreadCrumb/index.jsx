@@ -1,44 +1,37 @@
 import { Link, useLocation } from "react-router";
 import './bread.scss';
 
-const BreadCrumb = ({ rightLabel }) => {
+const BreadCrumb = () => {
     const location = useLocation();
     const parts = location.pathname.split("/").filter(Boolean);
 
     const format = (text) =>
         text.replace(/-/g, " ").replace(/\b\w/g, (ch) => ch.toUpperCase());
 
-    const visibleParts = rightLabel ? parts.slice(0, -1) : parts;
-
     const crumbs = [
         { name: "Home", path: "/" },
-        ...visibleParts.map((part, i) => ({
+        ...parts.map((part, i) => ({
             name: format(part),
             path: "/" + parts.slice(0, i + 1).join("/"),
         })),
     ];
     return (
-        <nav className="breadCrumb">
+        <nav className={`breadCrumb ${crumbs.length > 2 ? "three" : "two"}`}>
             {crumbs.map((c, i) => {
                 const last = i === crumbs.length - 1;
+                const divider = crumbs.length > 2 && i === crumbs.length - 2;
                 return (
-                    <span key={c.path}>
+                    <span key={c.path} className="crumb">
                         {last ? (
                             <span className="current">{c.name}</span>
                         ) : (
                             <Link to={c.path} className="link">{c.name}</Link>
                         )}
                         {!last && <span><img src="../icons/arrow.png" alt="" /></span>}
+                        {divider && <span className="divider" />}
                     </span>
                 )
             })}
-            {rightLabel && (
-                <>
-                    <span><img src="../icons/arrow.png" alt="" /></span>
-                    <span className="divider" />
-                    <span className="current">{rightLabel}</span>
-                </>
-            )}
         </nav>
     );
 };
