@@ -1,8 +1,8 @@
 import React from 'react';
 
 import styles from './SignUp.module.scss';
-import github from '../../../public/assets/sign-up/github_icon.svg';
-import google from '../../../public/assets/sign-up/google_icon.svg';
+import github from '/assets/sign-up/github_icon.svg';
+import google from '/assets/sign-up/google_icon.svg';
 
 export const SignUp = () => {
   return (
