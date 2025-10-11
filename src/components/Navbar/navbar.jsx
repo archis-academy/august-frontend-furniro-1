@@ -1,6 +1,4 @@
 import styles from './navbar.module.scss';
-import '@fontsource/montserrat/700.css';
-import '@fontsource/poppins';
 import Actions from './Actions';
 import NavbarLink from './Links';
 
