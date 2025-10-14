@@ -28,6 +28,7 @@ function Login() {
   return (
     <main className="login-page">
       <form onSubmit={onSubmit} className="login-card">
+        <PageHeader />
         <h1>Login</h1>
         <label htmlFor="email">Email adress</label>
         <input

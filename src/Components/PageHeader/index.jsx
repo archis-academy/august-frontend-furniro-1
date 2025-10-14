@@ -13,7 +13,6 @@ const PageHeader = () => {
     const location = useLocation();
     const pathParts = location.pathname.split("/").filter(Boolean);
 
-    // Ana sayfa ise 'Home', değilse ilk parçayı başlık yap
     let mainTitle = "Home"; 
     
     if (pathParts.length > 0) {
@@ -23,10 +22,8 @@ const PageHeader = () => {
 
     return (
         <div className="page-header-container">
-            <div className="page-logo-placeholder"><img src="./assets/page-header/ph-logo.png" alt="" /></div> 
-            
-            <h1 className="main-page-title">{mainTitle}</h1>
-            
+            <div className="page-logo-placeholder"><img src="./assets/page-header/ph-logo.png" alt="" /></div>           
+            <h1 className="main-page-title">{mainTitle}</h1>        
             <div className="breadcrumb-wrapper">
                 <BreadCrumb /> 
             </div>

@@ -4,7 +4,6 @@ import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
 import Navbar from './components/Navbar/navbar';
 import OurProduct from './Components/OurProduct';
-import PageHeader from './Components/PageHeader';
 
 export const Router = () => {
   return (
@@ -15,7 +14,6 @@ export const Router = () => {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="ourProduct" element={<OurProduct />} />
-        <Route path='/x' element={<PageHeader />} />
       </Routes>
     </BrowserRouter>
   );
