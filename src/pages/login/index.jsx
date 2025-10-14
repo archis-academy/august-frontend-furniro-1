@@ -1,6 +1,4 @@
-import BreadCrumb from '../../Components/BreadCrumb';
 import Buttons from '../../Components/Button/button';
-import PageHeader from '../../Components/PageHeader';
 import './login.scss';
 import { useState } from 'react';
 
@@ -28,7 +26,6 @@ function Login() {
   return (
     <main className="login-page">
       <form onSubmit={onSubmit} className="login-card">
-        <PageHeader />
         <h1>Login</h1>
         <label htmlFor="email">Email adress</label>
         <input
@@ -66,8 +63,7 @@ function Login() {
         <div className="submit">
           <Buttons text="Login" variant="primary" />
         </div>
-        <div>
-        </div>
+        <div></div>
       </form>
     </main>
   );

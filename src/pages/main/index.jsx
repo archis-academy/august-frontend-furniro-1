@@ -6,7 +6,6 @@ import PageHeader from '../../Components/PageHeader';
 export const Home = () => {
   return (
     <div>
-      <PageHeader />
       <HeroSection />
       <ExploreMoreSection />
       <OurProductSection />
