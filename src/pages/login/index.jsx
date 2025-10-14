@@ -65,7 +65,6 @@ function Login() {
           <Buttons text="Login" variant="primary" />
         </div>
         <div>
-          <BreadCrumb />
         </div>
       </form>
     </main>
