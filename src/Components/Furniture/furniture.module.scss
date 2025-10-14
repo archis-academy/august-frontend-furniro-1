@@ -1,6 +1,6 @@
-.exploreSectionCarousel {
+.container {
   max-width: 1440px;
-  margin:50px auto 0;
+  margin: auto 0;
   position: relative;
 
   .swiper-slide {
@@ -22,11 +22,15 @@
 .card {
   position: relative;
 }
-.furniture img {
+.furniture {
   display: block;
   height: 348px;
 }
 
 .swiper-slide-active {
   opacity: 1;
+}
+.swiper{
+  display: flex;
+  gap:10px;
 }
