@@ -1,3 +1,4 @@
+import BreadCrumb from '../../Components/BreadCrumb';
 import Buttons from '../../Components/Button/button';
 import './login.scss';
 import { useState } from 'react';
@@ -18,7 +19,7 @@ function Login() {
     }
     if (!passwordValid) {
       alert('Şifre en az 8 karakterli ve 1 büyük harf içermeli.');
-      return;   
+      return;
     }
     alert('Login başarılı!');
     console.log('Login başarılı:', form);
@@ -62,6 +63,9 @@ function Login() {
         </div>
         <div className="submit">
           <Buttons text="Login" variant="primary" />
+        </div>
+        <div>
+          <BreadCrumb />
         </div>
       </form>
     </main>
