@@ -63,7 +63,8 @@ function Login() {
         <div className="submit">
           <Buttons text="Login" variant="primary" />
         </div>
-        <div></div>
+        <div>
+        </div>
       </form>
     </main>
   );
