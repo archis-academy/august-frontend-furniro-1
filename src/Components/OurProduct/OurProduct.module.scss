@@ -1,0 +1,46 @@
+@use '../../styles/index.scss' as i;
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+
+  .title {
+    font-family: i.$font-family-base;
+    font-weight: 600;
+    font-size: 28px;
+    color: i.$dark;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @media (max-width: i.$desktop-s) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: i.$tablet-m) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: i.$mobile-m) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .btnWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+
+    button {
+      transition: transform 0.25s ease;
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
