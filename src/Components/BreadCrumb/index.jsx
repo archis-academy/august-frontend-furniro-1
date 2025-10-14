@@ -27,7 +27,7 @@ const BreadCrumb = () => {
                         ) : (
                             <Link to={c.path} className="link">{c.name}</Link>
                         )}
-                        {!last && <span><img src="../icons/arrow.png" alt="" /></span>}
+                        {!last && <span><img src="../assets/icons/arrow.png" alt="" /></span>}
                         {divider && <span className="divider" />}
                     </span>
                 )

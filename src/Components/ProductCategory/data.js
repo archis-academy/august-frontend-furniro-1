@@ -2,17 +2,17 @@ export const categories = [
     {
         title: "Living Room",
         options: ["Sos and Sectiofanals", "Desks and Chairs", "TV Units"],
-        img: '/assets/category-card/living.png'
+        img: '/assets/images/category-card/living.png'
     },
     {
         title: "Bedroom",
         options: ["Beds", "Wardrobes", "Nightstands"],
-        img:'/assets/category-card/bedroom.png'
+        img:'/assets/images/category-card/bedroom.png'
     },
     {
         title: "Dining Room",
         options: ["Dining Tables", "Dining Chairs", "Sideboards"],
-        img: '/assets/category-card/dining.png'
+        img: '/assets/images/category-card/dining.png'
     },
     {
         title: "Home Office",

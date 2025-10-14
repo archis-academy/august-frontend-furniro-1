@@ -1,8 +1,7 @@
 import React from 'react';
 
 import styles from './SignUp.module.scss';
-import github from '/assets/sign-up/github_icon.svg';
-import google from '/assets/sign-up/google_icon.svg';
+
 
 export const SignUp = () => {
   return (
@@ -40,14 +39,14 @@ export const SignUp = () => {
           <div className={styles.buttons}>
             <button type="button" className={styles.githubBtn}>
               <span className={styles.githubIcon}>
-                <img src={github} alt="GitHub icon" />
+                <img src="assets/images/login/GitHub.png" alt="GitHub icon" />
               </span>
               <span className={styles.githubTxt}>Sign up with GitHub</span>
             </button>
 
             <button type="button" className={styles.googleBtn}>
               <span className={styles.googleIcon}>
-                <img src={google} alt="Google icon" />
+                <img src="assets/images/login/Google.png" alt="Google icon" />
               </span>
               <span className={styles.googleTxt}>Sign up with Google</span>
             </button>

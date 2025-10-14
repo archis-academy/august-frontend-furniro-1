@@ -52,11 +52,11 @@ function Login() {
         <div className="or">- OR -</div>
         <div className="social-buttons">
           <button type="button" className="social-button">
-            <img src="/icons/GitHub.png" alt="google icon" />
+            <img src="/assets/images/login/GitHub.png" alt="google icon" />
             <span>Sign up with GitHub</span>
           </button>
           <button type="button" className="social-button">
-            <img src="/icons/Google.png" alt="github icon" />
+            <img src="/assets/images/login/Google.png" alt="github icon" />
             <span>Sign up with Google</span>
           </button>
         </div>
