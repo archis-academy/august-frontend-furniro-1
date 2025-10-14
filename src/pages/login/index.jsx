@@ -1,5 +1,6 @@
 import BreadCrumb from '../../Components/BreadCrumb';
 import Buttons from '../../Components/Button/button';
+import PageHeader from '../../Components/PageHeader';
 import './login.scss';
 import { useState } from 'react';
 
@@ -65,7 +66,6 @@ function Login() {
           <Buttons text="Login" variant="primary" />
         </div>
         <div>
-          <BreadCrumb />
         </div>
       </form>
     </main>
