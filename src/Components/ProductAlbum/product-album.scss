@@ -1,0 +1,52 @@
+.gallery-container {
+    display: flex;
+    max-width: 550px;
+    margin: 0 auto;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.thumbnail-list {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;  
+}
+
+.thumbnail {
+    width: 76px; 
+    height: 80px;
+    background-color: #FCF8F3;
+    object-fit: cover; 
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.9;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+}
+
+.thumbnail.active {
+    border-color: #3f51b5; 
+    opacity: 1;
+}
+
+.featured-image-container {
+    flex-grow: 1; 
+    width: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcfbf8; 
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}

@@ -3,6 +3,7 @@ import { Home } from './pages/main';
 import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
 import Navbar from './components/Navbar/navbar';
+import { Gallery } from './Components/ProductAlbum';
 
 export const Router = () => {
   return (
@@ -12,6 +13,7 @@ export const Router = () => {
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/x" element={<Gallery />}></Route>
       </Routes>
     </BrowserRouter>
   );
