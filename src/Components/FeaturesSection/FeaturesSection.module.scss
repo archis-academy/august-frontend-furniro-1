@@ -1,0 +1,53 @@
+@use '../../styles/variables' as i;
+
+.features {
+  background-color: i.$cream;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  gap: 55px;
+  padding: 100px 50px;
+  flex-wrap: wrap;
+
+  .features__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    max-width: 340px;
+
+    @media (max-width: i.$tablet-m) {
+      width: 100%;
+    }
+
+    .icon__wrapper {
+      width: 60px;
+      height: 60px;
+      .icon {
+        width: 100%;
+      }
+    }
+    .features__text {
+      font-family: i.$font-family-base;
+
+      .features__title {
+        display: flex;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        color: i.$dark;
+        margin: 0;
+      }
+      .features__subtitle {
+        display: flex;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        color: #acacac;
+        margin: 0;
+      }
+    }
+  }
+}
