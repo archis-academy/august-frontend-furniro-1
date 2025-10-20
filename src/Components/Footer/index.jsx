@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import styles from './Footer.module.scss';
 
 function Footer() {
@@ -10,13 +12,20 @@ function Footer() {
         <div className={styles.navigations}>
           <div className={styles.block}>
             <div className={styles.title}>LINKS</div>
-            <div className={styles.line} />
 
             <ul>
-              <li>Home</li>
-              <li>Shop</li>
-              <li>About</li>
-              <li>Contact</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/shop">Shop</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
             </ul>
           </div>
 
@@ -50,14 +59,15 @@ function Footer() {
                 className={styles.input}
                 required
               />
+              <a className={styles.subscribeBtn}>SUBSCRIBE</a>
             </form>
           </div>
-          <a className={styles.subscribeBtn}>SUBSCRIBE</a>
         </div>
 
-        <div className={styles.hr} />
         <div className={styles.subTxt}>2023 furniro. All rights reserved</div>
       </footer>
+
+      <div></div>
     </>
   );
 }
