@@ -4,9 +4,18 @@ import Buttons from '../Button/button';
 import styles from './OurProduct.module.scss';
 
 const order = [
-  'NEW','NEW','NEW','NEW',
-  '%15','%15','%15','%15','%15',
-  'NEW','%15','NEW',
+  'NEW',
+  'NEW',
+  'NEW',
+  'NEW',
+  '%15',
+  '%15',
+  '%15',
+  '%15',
+  '%15',
+  'NEW',
+  '%15',
+  'NEW',
 ];
 
 const makeBadges = (count) =>
@@ -19,8 +28,6 @@ function OurProduct() {
 
   return (
     <section className={styles.container}>
-      <h2 className={styles.title}>Our Products</h2>
-
       <div className={styles.grid}>
         {badges.map((badge, i) => (
           <ProductCard

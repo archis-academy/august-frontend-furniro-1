@@ -9,6 +9,7 @@ export const Home = () => {
       <HeroSection />
       <ExploreMoreSection />
       <OurProductSection />
+      
     </div>
   );
 };
