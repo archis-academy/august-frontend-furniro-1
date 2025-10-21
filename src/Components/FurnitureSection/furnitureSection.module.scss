@@ -1,6 +1,7 @@
 .container{
-    display: flex;
-    max-width: 1440px;
-    justify-content: center;
+    display: flex;;
     gap:12px;
+    padding: 20px;
+    overflow: hidden;
+    max-width: 99vw;
 }

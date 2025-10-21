@@ -1,36 +1,40 @@
 .container {
-  max-width: 1440px;
-  margin: auto 0;
+  width: 98vw;
+  margin: 0 auto;
   position: relative;
+  overflow: hidden;
+}
 
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    transform-origin: top center;
-    margin-bottom: 50px;
-  }
-  .swiper-slide-prev,
-  .swiper-slide-next {
-    transform: scale(0.9, 0.9);
-    opacity: 0.5;
-  }
-  .swiper-slide-active .card {
-    transform: scale(1.5, 1.2);
-  }
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.swiperSlide {
+  width: auto; // Her bir slaytın sabit genişliği. Burayı istediğin gibi değiştir.
+  flex-shrink: 0; // Flexbox'ın slaytları küçültmesini engeller. Bu satır kritik!
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
   position: relative;
-}
-.furniture {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 348px;
 }
 
-.swiper-slide-active {
-  opacity: 1;
+.swiper {
+  width: 100%;
+  box-sizing: border-box;
 }
-.swiper{
-  display: flex;
-  gap:10px;
+
+.furniture {
+  height: 348px;
+  width: auto;
+  object-fit: cover;
 }
