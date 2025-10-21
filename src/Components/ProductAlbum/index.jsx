@@ -1,17 +1,11 @@
 import { useState } from 'react'
 import './product-album.scss'
-import { photos } from '../../mock/data'
 
-export const Gallery = () => {
-    const [selectedPhoto, setSelectedPhoto] = useState(photos[0] || null);
+export const Gallery = ({ photos = [] }) => {
+    const [selectedPhoto, setSelectedPhoto] = useState(photos[0]);
 
-    const thumbnailPhotos = photos.filter(
-        (photo) => photo.id !== selectedPhoto.id
-    );
+    const thumbnailPhotos = photos.filter((p) => p.id !== selectedPhoto.id);
 
-    const handleThumbnailClick = (photo) => {
-        setSelectedPhoto(photo);
-    };
     return (
         <div className="gallery-container">
             <div className="thumbnail-list">
@@ -21,7 +15,7 @@ export const Gallery = () => {
                         src={photo.url}
                         alt={photo.alt}
                         className="thumbnail"
-                        onClick={() => handleThumbnailClick(photo)}
+                        onClick={() => setSelectedPhoto(photo)}
                     />
                 ))}
             </div>
