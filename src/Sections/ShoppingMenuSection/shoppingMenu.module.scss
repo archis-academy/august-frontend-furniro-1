@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color:#FCF8F3;
+    height:100px;
+    align-items: center;
+}
+.leftSide{
+    display: flex;
+    width:348px;
+    gap:20px;
+    margin-left:5%;
+}
+.rightSide{
+    display: flex;
+    margin-right:5%;
+    width:288px;
+    justify-content:space-around;
+    font-size:20px;
+}
+.filter{
+    display: flex;
+    gap:10px;
+    height:20px;
+    font-size:20px;
+}
+p{
+    margin: 0;
+}
+.default{
+    display: flex;
+    width: 188px;
+    height: 55px;
+    background-color:#FFFFFF;
+    align-items: center;
+    justify-content: center;
+    color:#ACACAC;
+}
+.sort{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
