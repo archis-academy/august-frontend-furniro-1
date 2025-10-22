@@ -10,11 +10,11 @@ import './carousel.scss';
 import ExploreCard from '../ExploreCard';
 
 const slides = [
-    { id: 1, image: "/assets/explore-section/2.png", title: "Inner Peace", room: "Living Room" },
-    { id: 2, image: "/assets/explore-section/1.png", title: "Kitchen", room: "Kitchen" },
-    { id: 3, image: "/assets/explore-section/2.png", title: "Bedroom", room: "Bedroom" },
-    { id: 4, image: "/assets/explore-section/1.png", title: "Bedroom", room: "Bedroom" },
-    { id: 5, image: "/assets/explore-section/2.png", title: "Bedroom", room: "Bedroom" },
+    { id: 1, image: "/assets/images/explore-section/2.png", title: "Inner Peace", room: "Living Room" },
+    { id: 2, image: "/assets/images/explore-section/1.png", title: "Kitchen", room: "Kitchen" },
+    { id: 3, image: "/assets/images/explore-section/2.png", title: "Bedroom", room: "Bedroom" },
+    { id: 4, image: "/assets/images/explore-section/1.png", title: "Bedroom", room: "Bedroom" },
+    { id: 5, image: "/assets/images/explore-section/2.png", title: "Bedroom", room: "Bedroom" },
 ]
 const Carousel = () => {
     const [activeIndex, setActiveIndex] = React.useState(0);

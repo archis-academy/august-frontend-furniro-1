@@ -22,7 +22,7 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
 
           <img
             className={styles.image}
-            src="/assets/product/cardImage.svg"
+            src="/assets/icons/product/cardImage.svg"
             alt="Syltherine"
           />
 
@@ -38,8 +38,8 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
                 className={styles.likeIcon}
                 src={
                   liked
-                    ? '/assets/product/likeIcon-filled-red.svg'
-                    : '/assets/product/likeIcon.svg'
+                    ? '/assets/icons/product/likeIcon-filled-red.svg'
+                    : '/assets/icons/product/likeIcon.svg'
                 }
                 alt=""
               />
@@ -52,7 +52,7 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
             >
               <img
                 className={styles.searchIcon}
-                src="/assets/product/searchIcon.svg"
+                src="/assets/icons/product/searchIcon.svg"
                 alt=""
               />
             </button>
@@ -64,7 +64,7 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
             >
               <img
                 className={styles.shopIcon}
-                src="/assets/product/shopIcon.svg"
+                src="/assets/icons/product/shopIcon.svg"
                 alt=""
               />
             </button>

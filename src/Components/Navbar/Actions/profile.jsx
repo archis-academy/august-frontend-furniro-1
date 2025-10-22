@@ -5,7 +5,7 @@ function Profile({ toggle, setToggle }) {
   return (
     <div className={styles.icon}>
       <img
-        src="assets/navbar/profile.svg"
+        src="assets/icons/navbar/profile.svg"
         alt="profile icon"
         onClick={(e) => {
           e.stopPropagation(); 

@@ -17,7 +17,7 @@ function form() {
         <div className={styles.infos}>
           <div className={styles.info}>
             <div className={styles.icon}>
-              <img src="/assets/form/location-icon.svg" alt="location icon" />
+              <img src="/assets/icons/form/location-icon.svg" alt="location icon" />
             </div>
             <div>
               <h2 className={styles.name}>Adress</h2>
@@ -26,7 +26,7 @@ function form() {
           </div>
           <div className={styles.info}>
             <div className={styles.icon}>
-              <img src="/assets/form/phone-icon.svg" alt="phone icon" />
+              <img src="/assets/icons/form/phone-icon.svg" alt="phone icon" />
             </div>
             <div>
               <h2 className={styles.name}>Phone</h2>
@@ -36,7 +36,7 @@ function form() {
           </div>
           <div className={styles.info}>
             <div className={styles.icon}>
-              <img src="/assets/form/time-icon.svg" alt="time icon" />
+              <img src="/assets/icons/form/time-icon.svg" alt="time icon" />
             </div>
             <div>
               <h2 className={styles.name}>Working Time</h2>
