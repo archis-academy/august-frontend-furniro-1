@@ -43,11 +43,13 @@ function OurProduct({ showTitle }) {
 
       <div className={styles.btnWrap}>
         {showTitle ? (
+          <div className={styles.showbtnWrap}>
           <Buttons
             variant="tertiary"
             text={showMore ? 'Show Less' : 'Show More'}
             onClick={() => setShowMore((v) => !v)}
           />
+          </div>
         ) : (
           <div className={styles.shopBtn}>
             <Buttons

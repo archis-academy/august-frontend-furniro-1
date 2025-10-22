@@ -13,22 +13,21 @@
     @media (max-width: i.$desktop-s) {
       grid-template-columns: repeat(3, 1fr);
     }
-   
   }
 
   .btnWrap {
+    width: 100%;
     display: flex;
-    margin-left: 220px;
     margin-top: 32px;
+    .showbtnWrap {
+      margin-left: 220px;
+    }
 
     .shopBtn {
-      width: 100%;
       display: flex;
       gap: 38px;
-      justify-content: start;
+      margin-left: 90px;
       @media (max-width: i.$desktop-s) {
-        display: flex;
-        justify-content: center;
         margin-right: 100px;
       }
     }
