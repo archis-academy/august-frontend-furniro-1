@@ -1,0 +1,13 @@
+.category-card_item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    img {
+        border-radius: 10px;
+    }
+    span {
+        color: #3A3A3A;
+        font-weight: 600;
+        font-size: 24px;
+    }
+}

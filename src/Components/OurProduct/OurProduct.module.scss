@@ -13,12 +13,7 @@
     @media (max-width: i.$desktop-s) {
       grid-template-columns: repeat(3, 1fr);
     }
-    @media (max-width: i.$tablet-m) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: i.$mobile-m) {
-      grid-template-columns: 1fr;
-    }
+   
   }
 
   .btnWrap {
@@ -27,10 +22,15 @@
     margin-top: 32px;
 
     .shopBtn {
+      width: 100%;
       display: flex;
       gap: 38px;
       justify-content: start;
-      
+      @media (max-width: i.$desktop-s) {
+        display: flex;
+        justify-content: center;
+        margin-right: 100px;
+      }
     }
 
     button {

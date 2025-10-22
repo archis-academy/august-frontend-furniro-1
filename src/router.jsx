@@ -3,7 +3,6 @@ import { Home } from './pages/main';
 import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
 import Navbar from './components/Navbar/navbar';
-import OurProduct from './Components/OurProduct';
 import Shop from './pages/Shop';
 
 export const Router = () => {

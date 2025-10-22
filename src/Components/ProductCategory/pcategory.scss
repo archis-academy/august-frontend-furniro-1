@@ -3,6 +3,7 @@
   border: 1px solid #f1f1f1;
   border-radius: 10px;
   padding: 10px 15px;
+  height: fit-content;
 }
 
 .category_click {
@@ -33,6 +34,25 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.filter-title{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.count {
+  background-color: #2ec1ac;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  margin-top: 2px;
 }
 
 .option {

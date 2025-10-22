@@ -4,7 +4,7 @@ function Search({ toggle, setToggle }) {
   return (
     <div className={styles.icon}>
       <img
-        src="assets/navbar/search.svg"
+        src="assets/icons/navbar/search.svg"
         alt="search icon"
         onClick={(e) => {
           e.stopPropagation(); 
