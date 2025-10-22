@@ -1,0 +1,113 @@
+@use '../../styles/variables' as i;
+
+.footerContainer {
+  width: 100%;
+  background-color: i.$dark;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: i.$font-family-base;
+
+  .logo {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+    color: i.$white;
+  }
+
+  .navigations {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    gap: 10%;
+    flex-wrap: wrap;
+
+    .block {
+      .title {
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.06em;
+        display: flex;
+        width: fit-content;
+        border-bottom: 2px solid #e97171;
+        line-height: 25px;
+        padding-bottom: 4px;
+        margin-bottom: 16px;
+        color: i.$white;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          font-size: 16px;
+          flex-wrap: nowrap;
+          font-weight: 500;
+          line-height: 1.6;
+          margin: 6px 0;
+          display: flex;
+          margin-bottom: 20px;
+          color: i.$white;
+          a {
+            color: #fff;
+            text-decoration: none;
+
+            &:visited,
+            &:active,
+            &:focus {
+              color: #fff;
+            }
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .newsletter {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: nowrap;
+        color: i.$white;
+
+        .input {
+          width: 220px;
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+          padding: 6px 0;
+          color: #fff;
+          outline: none;
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.65);
+          }
+        }
+
+        .subscribeBtn {
+          font-weight: 500;
+          font-style: Medium;
+          font-size: 14px;
+          line-height: 100%;
+          letter-spacing: 0%;
+        }
+      }
+    }
+  }
+
+  .subTxt {
+    border-top: 1px solid #fff;
+    margin: 40px auto;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1240px;
+    width: 100%;
+    color: i.$white;
+  }
+}
