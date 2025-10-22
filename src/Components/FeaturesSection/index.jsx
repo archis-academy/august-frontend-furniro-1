@@ -4,25 +4,25 @@ import styles from './FeaturesSection.module.scss';
 function FeaturesSection() {
   const featuresData = [
     {
-      icon: '/assets/features-section/trophy.svg',
+      icon: '/assets/icons/features-section/trophy.svg',
       title: 'High Quality',
       subtitle: 'crafted from top materials',
       alt: 'High quality trophy',
     },
     {
-      icon: '/assets/features-section/guarantee.svg',
+      icon: '/assets/icons/features-section/guarantee.svg',
       title: 'Warranty Protection',
       subtitle: 'Over 2 years',
       alt: 'Warranty check badge',
     },
     {
-      icon: '/assets/features-section/shipping.svg',
+      icon: '/assets/icons/features-section/shipping.svg',
       title: 'Free Shipping',
       subtitle: 'Order over 150 $',
       alt: 'Free shipping box',
     },
     {
-      icon: '/assets/features-section/customer-support.svg',
+      icon: '/assets/icons/features-section/customer-support.svg',
       title: '24 / 7 Support',
       subtitle: 'Dedicated support',
       alt: '24/7 customer support headset',
