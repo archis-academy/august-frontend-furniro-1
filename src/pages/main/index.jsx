@@ -9,6 +9,7 @@ export const Home = () => {
     <div>
       <HeroSection />
       <TopCategories />
+      <OurProductSection showTile={true} />
       <ExploreMoreSection />
     </div>
   );
