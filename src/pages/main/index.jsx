@@ -8,7 +8,7 @@ export const Home = () => {
     <div>
       <HeroSection />
       <ExploreMoreSection />
-      <OurProductSection />
+      <OurProductSection  showTile={true}/>
       
     </div>
   );

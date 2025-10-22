@@ -17,7 +17,7 @@ function OurProductSection({showTitle = true}) {
         </aside>
 
         <div className={styles.ourProductWrap}>
-          <OurProduct />
+          <OurProduct showTitle={showTitle}/>
         </div>
       </div>
     </section>

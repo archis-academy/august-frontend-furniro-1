@@ -26,6 +26,13 @@
     margin-left: 220px;
     margin-top: 32px;
 
+    .shopBtn {
+      display: flex;
+      gap: 38px;
+      justify-content: start;
+      
+    }
+
     button {
       transition: transform 0.25s ease;
       &:hover {
