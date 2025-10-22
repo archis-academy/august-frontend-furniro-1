@@ -4,6 +4,7 @@ import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
 import Navbar from './components/Navbar/navbar';
 import Shop from './pages/Shop';
+import Footer from './Components/Footer';
 
 export const Router = () => {
   return (
@@ -15,6 +16,7 @@ export const Router = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/shop" element={<Shop />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
