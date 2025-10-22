@@ -5,7 +5,7 @@ function ShoppingCard({ toggle, setToggle }) {
   return (
     <div className={styles.icon}>
       <img
-        src="assets/navbar/basket.svg"
+        src="assets/icons/navbar/basket.svg"
         alt="profile icon"
         onClick={(e) => {
           e.stopPropagation(); 
@@ -21,33 +21,33 @@ function ShoppingCard({ toggle, setToggle }) {
           <div className={styles.topSide}>
             <div className={styles.title}>
               Shopping Card
-              <img src="assets/navbar/lock.svg" alt="lock" />
+              <img src="assets/icons/navbar/lock.svg" alt="lock" />
             </div>
             <hr className={styles.line}></hr>
 
             <div className={styles.product1}>
               <div className={styles.image}>
-                <img src="assets/navbar/sofa.svg" alt="sofa" />
+                <img src="assets/icons/navbar/sofa.svg" alt="sofa" />
               </div>
               <div className={styles.info}>
                 <div>Asgaard Sofa</div>
                 <div className={styles.price}>1 x Rs. 250,000.00</div>
               </div>
               <div className={styles.vector}>
-                <img src="assets/navbar/vector.svg" alt="remove" />
+                <img src="assets/icons/navbar/vector.svg" alt="remove" />
               </div>
             </div>
 
             <div className={styles.product2}>
               <div className={styles.image}>
-                <img src="assets/navbar/wood.svg" alt="wood" />
+                <img src="assets/icons/navbar/wood.svg" alt="wood" />
               </div>
               <div className={styles.info}>
                 <div>Casaliving Wood</div>
                 <div className={styles.price}>1 x Rs. 270,000.00</div>
               </div>
               <div className={styles.vector}>
-                <img src="assets/navbar/vector.svg" alt="remove" />
+                <img src="assets/icons/navbar/vector.svg" alt="remove" />
               </div>
             </div>
           </div>
