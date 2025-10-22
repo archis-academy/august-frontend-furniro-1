@@ -11,7 +11,8 @@ export const Home = () => {
       <HeroSection />
       <TopCategories />
       <ExploreMoreSection />
-      <OurProductSection />
+      <OurProductSection  showTile={true}/>
+      
     </div>
   );
 };
