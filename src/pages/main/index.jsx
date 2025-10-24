@@ -9,8 +9,6 @@ export const Home = () => {
   return (
     <div>
       <HeroSection />
-      <Wrapper />
-      <WrapperReverse />
       <ExploreMoreSection />
       <FurnitureSection/>
     </div>

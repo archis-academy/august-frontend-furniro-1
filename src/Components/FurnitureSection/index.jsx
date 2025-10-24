@@ -1,5 +1,7 @@
 import Furniture from '../Furniture/furniture';
 import styles from './furnitureSection.module.scss';
+import Wrapper from '../../Components/Wrapper';
+import WrapperReverse from '../../Components/Wrapper/reverse';
 
 function FurnitureSection() {
   const slides = [
@@ -14,7 +16,13 @@ function FurnitureSection() {
   ];
   return (
     <div>
-      <Furniture reverse={false} />
+      <div className={styles.text}>
+        <p>Share your setup with</p>
+      </div>
+      <div>
+        <h1>#FurniroFurniture</h1>
+      </div>
+     <Wrapper />
       <div className={styles.container}>
         {slides.map((slide) => (
           <div key={slide.id} className={styles.card}>
@@ -27,7 +35,7 @@ function FurnitureSection() {
           </div>
         ))}
       </div>
-      <Furniture reverse={true} />
+      <WrapperReverse />
     </div>
   );
 }
