@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { ExploreMoreSection, HeroSection } from '../../Sections';
 import FurnitureSection from '../../Components/FurnitureSection/index';
 import OurProductSection from '../../Sections/OurProductSection';
-import Product from '../../Components/ProductCard';
 import { TopCategories } from '../../Sections/TopCategories';
+
 
 export const Home = () => {
   return (

@@ -1,0 +1,76 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color:#FCF8F3;
+    height:100px;
+    align-items: center;
+}
+.leftSide{
+    display: flex;
+    width:348px;
+    gap:20px;
+    margin-left:5%;
+}
+.rightSide{
+    display: flex;
+    margin-right:5%;
+    width:288px;
+    justify-content:space-around;
+    font-size:20px;
+}
+.filter{
+    display: flex;
+    gap:10px;
+    height:20px;
+    font-size:20px;
+}
+p{
+    margin: 0;
+}
+.default{
+    display: flex;
+    width: 188px;
+    height: 55px;
+    background-color:#FFFFFF;
+    align-items: center;
+    justify-content: center;
+    color:#ACACAC;
+}
+.sort{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdownWrapper {
+  position: relative;  // Menü pozisyonunun referansı
+  display: inline-block;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;  // Butonun hemen altı
+  left: 0;
+  right: 0;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdownItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
