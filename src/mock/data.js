@@ -7,7 +7,7 @@ export const singleProductData = [
         price: 250000,
         currencySymbol: "$",
         rating: {
-            stars: 4.5,
+            stars: 3,
             reviewCount: 5,
             reviewText: "5 Customer Review"
         },
