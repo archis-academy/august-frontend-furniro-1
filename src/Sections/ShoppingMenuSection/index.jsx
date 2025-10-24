@@ -1,6 +1,22 @@
 import styles from './shoppingMenu.module.scss';
+import { useState } from 'react';
 
 function ShoppingMenuSection() {
+  const [menu, setMenu] = useState(false);
+  const [selection, setSelection] = useState('Default');
+  const selections = [
+    'A to Z',
+    'Z to A',
+    'Price: Low to High',
+    'Price: High to Low',
+  ];
+  const handleClick = () => {
+    setMenu(!menu);
+  };
+  const handleSelection = (select) => {
+    setSelection(select);
+    setMenu(false);
+  };
   return (
     <div className={styles.container}>
       <div className={styles.leftSide}>
@@ -21,8 +37,34 @@ function ShoppingMenuSection() {
         <div className={styles.sort}>
           <p>Sort by</p>
         </div>
-        <div className={styles.default}>
-          <p>Default</p>
+        <div className={styles.dropdownWrapper}>
+          <button className={styles.default} onClick={handleClick}>
+            {selection}
+          </button>
+          {menu && (
+            <ul
+              className={styles.dropdownMenu}
+              style={{ listStyle: 'none', padding: 0, marginTop: '10px' }}
+            >
+              {selections.map((select, index) => (
+                <li
+                  key={index}
+                  className={styles.dropdownItem}
+                  onClick={() => handleSelection(select)}
+                  style={{
+                    cursor: 'pointer',
+                    padding: '8px',
+                    backgroundColor: '#B88E2F ',
+                    color:'white',
+                    marginBottom: '5px',
+                    borderRadius: '4px',
+                  }}
+                >
+                  {select}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </div>

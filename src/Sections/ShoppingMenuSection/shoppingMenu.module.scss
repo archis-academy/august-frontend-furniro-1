@@ -41,3 +41,36 @@ p{
     align-items: center;
     justify-content: center;
 }
+.dropdownWrapper {
+  position: relative;  // Menü pozisyonunun referansı
+  display: inline-block;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;  // Butonun hemen altı
+  left: 0;
+  right: 0;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdownItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
