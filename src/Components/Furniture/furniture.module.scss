@@ -1,0 +1,40 @@
+.container {
+  width: 98vw;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.swiperSlide {
+  width: auto; // Her bir slaytın sabit genişliği. Burayı istediğin gibi değiştir.
+  flex-shrink: 0; // Flexbox'ın slaytları küçültmesini engeller. Bu satır kritik!
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 348px;
+}
+
+.swiper {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.furniture {
+  height: 348px;
+  width: auto;
+  object-fit: cover;
+}

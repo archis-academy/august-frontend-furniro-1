@@ -1,0 +1,36 @@
+/* Dış container, bizim "penceremiz" olacak */
+.sliderContainer {
+  width: 100%;
+  max-width: 98vw;
+  overflow: hidden; /* En önemli kural: Dışarı taşanları gizle */
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Bütün slaytları içeren ve hareket edecek olan kısım */
+.sliderWrapper {
+  display: flex; /* Elemanları yan yana diz */
+  align-items: center;
+  
+  /* Animasyonun akıcı olmasını sağlayan kural */
+  transition: transform 1s ease-in-out; 
+}
+
+/* Her bir slayt elemanı için temel stiller */
+.slide {
+  flex-shrink: 0; /* Elemanların sıkışıp küçülmesini engelle! Bu çok önemli. */
+  margin-right: 30px; /* spaceBetween'in karşılığı */
+  overflow: hidden;
+  width: auto;
+  height: 350px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.furnitureImage {
+  display: block;
+  width: auto;
+  height: 350px;
+  object-fit: cover;
+}
