@@ -1,0 +1,14 @@
+.container{
+    margin:40px;
+}
+.cards {
+  width:1130px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 sütun */
+  gap:20px;
+  justify-content: center;
+  margin: 20px auto;
+}
+h2{
+    font-weight: 500;
+}

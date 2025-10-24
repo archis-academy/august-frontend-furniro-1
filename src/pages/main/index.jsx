@@ -5,6 +5,7 @@ import Product from '../../Components/ProductCard';
 import { TopCategories } from '../../Sections/TopCategories';
 import FurnitureSection from '../../Components/FurnitureSection/index';
 import ShoppingMenuSection from '../../Sections/ShoppingMenuSection/index';
+import RelatedProducts from '../../Components/RelatedProducts';
 
 export const Home = () => {
   return (
@@ -15,6 +16,7 @@ export const Home = () => {
       <OurProductSection showTile={true} />
       <ExploreMoreSection />
       <FurnitureSection/>
+      <RelatedProducts/>
     </div>
   );
 };
