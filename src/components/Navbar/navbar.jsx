@@ -1,30 +1,26 @@
 import styles from './navbar.module.scss';
-import '@fontsource/montserrat/700.css';
-import '@fontsource/poppins';
 import Actions from './Actions';
-import About from "./Links/about";
- 
+import NavbarLink from './Links';
 
 function Navbar() {
   return (
     <div className={styles.navContainer}>
       <div className={styles.navTitle}>
         <div>
-          <img src="/assets/navbar/nav-icon.svg" alt="nav-icon" />
+          <img src="/assets/icons/navbar/nav-icon.svg" alt="nav-icon" />
         </div>
         <div>
           <h1 className={styles.title}>Furniro.</h1>
         </div>
       </div>
       <div className={styles.navLinks}>
-        <About name="Home" page="/"/>
-        <About name="Shop"/>
-        <About name="About"/>
-        <About name="Contact"/>
+        <NavbarLink name="Home" page="/" />
+        <NavbarLink name="Shop" page="/shop" />
+        <NavbarLink name="About" page="/about" />
+        <NavbarLink name="Contact" page="/contact" />
       </div>
 
-        <Actions />
-  
+      <Actions />
     </div>
   );
 }

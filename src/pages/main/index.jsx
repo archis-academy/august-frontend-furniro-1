@@ -1,14 +1,16 @@
 import React from 'react';
 import { ExploreMoreSection, HeroSection } from '../../Sections';
 import FurnitureSection from '../../Components/FurnitureSection/index';
-import Wrapper from '../../Components/Wrapper';
-import WrapperReverse from '../../Components/Wrapper/reverse';
-
+import OurProductSection from '../../Sections/OurProductSection';
+import Product from '../../Components/ProductCard';
+import { TopCategories } from '../../Sections/TopCategories';
 
 export const Home = () => {
   return (
     <div>
       <HeroSection />
+      <TopCategories />
+      <OurProductSection />
       <ExploreMoreSection />
       <FurnitureSection/>
     </div>
