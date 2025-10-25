@@ -5,7 +5,7 @@ import Login from './pages/login';
 import Navbar from './Components/Navbar/navbar';
 import Shop from './pages/Shop';
 import Footer from './Components/Footer';
-import { SingleProduct } from './Sections/singleProductHeader';
+import SingleProductPage from './pages/singleProduct';
 
 export const Router = () => {
   return (
@@ -16,7 +16,7 @@ export const Router = () => {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/shop/:product_title" element={<SingleProduct />}></Route>
+        <Route path="/shop/:product_title" element={<SingleProductPage/>}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
