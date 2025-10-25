@@ -6,16 +6,17 @@ import Gallery from "../../Components/ProductAlbum";
 
 
 export const SingleProduct = () => {
-    const { product_title } = useParams();
+  const { product_title } = useParams();
 
-    const product = singleProductData.find(
-        (p) => p.product_title === product_title
-    );
+  const product = singleProductData.find(
+    (p) => p.product_title === product_title,
+  );
 
     return (
         <div className="single_product_header">
             <Gallery photos={product.photos} />
-            <SingleProductDetails product={product} />
+        <SingleProductDetails product={product} />
+        
         </div>
     );
 };
