@@ -9,3 +9,30 @@
     @content;
   }
 }
+
+@mixin custom-scrollbar(
+  $track-color: #D1D1D1,
+  $thumb-color: #F1F1F1,
+  $thumb-hover: #b3b3b3, 
+  $width: 20px, 
+  $radius: 15px
+) {
+  scrollbar-width: thin;
+  scrollbar-color: $thumb-color $track-color;
+
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: $radius;
+    border: 2px solid $track-color;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $thumb-hover;
+  }
+}
