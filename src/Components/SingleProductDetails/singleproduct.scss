@@ -31,9 +31,12 @@
         gap: 80px;
 
         .pd__stars {
+            align-items: center;
+            display: inline-flex;
             width: 18px;
             height: 18px;
             color: #FF9900;
+            position: relative;
         }
 
         .pd__reviews {
@@ -167,5 +170,12 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .pd-section {
+        width: 100%;
+        max-width: none;
     }
 }

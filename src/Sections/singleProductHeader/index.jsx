@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
-import { Gallery } from "../../Components/ProductAlbum";
-import { singleProductData } from "../../mock/data";
-import SingleproductDetails from "../../Components/SingleProductDetails";
+import "./singleProductHeader.scss";
+import singleProductData from "../../mock/data";
+import SingleProductDetails from "../../Components/SingleProductDetails";
+import Gallery from "../../Components/ProductAlbum";
 
 
 export const SingleProduct = () => {
@@ -12,9 +13,9 @@ export const SingleProduct = () => {
     );
 
     return (
-        <div style={{display: "flex", gap: "40px"}}>
+        <div className="single_product_header">
             <Gallery photos={product.photos} />
-            <SingleproductDetails product={product} />
+            <SingleProductDetails product={product} />
         </div>
     );
 };
