@@ -1,4 +1,5 @@
 import BreadCrumb from '../../Components/BreadCrumb'
+import RelatedProducts from '../../Components/RelatedProducts';
 import { SingleProductHeader } from '../../Sections/singleProductHeader'
 import './singleproductpage.scss';
 
@@ -10,6 +11,9 @@ const SingleProductPage = () => {
             </div>
             <div className='spp-header'>
                 <SingleProductHeader />
+            </div>
+            <div>
+                <RelatedProducts />
             </div>
         </div>
     )
