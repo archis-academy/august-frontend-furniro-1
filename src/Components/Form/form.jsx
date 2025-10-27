@@ -1,6 +1,7 @@
 import styles from './form.module.scss';
 import Input from '../Input/index.jsx';
 import '@fontsource/poppins';
+import Buttons from '../Button/button.jsx';
 
 function form() {
   return (
@@ -54,6 +55,7 @@ function form() {
             placeholder="Hi! i’d like to ask about"
             type="text"
           />
+          <Buttons text = "Submit" variant = 'primary' />
         </div>
       </div>
     </div>
