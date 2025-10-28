@@ -67,3 +67,15 @@ body {
 .navIcons{
   margin-right:25px;
 }
+.navIcon{
+  display: flex;
+  cursor: pointer;
+  color: #3A3A3A;
+  align-items: center;
+  gap:4px;
+  text-decoration: none;
+}
+
+  .navIcon:hover {
+  color: black;
+}
