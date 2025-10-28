@@ -12,11 +12,17 @@ export const SingleProduct = () => {
     (p) => p.product_title === product_title,
   );
 
-    return (
-        <div className="single_product_header">
-            <Gallery photos={product.photos} />
-        <SingleProductDetails product={product} />
-        
-        </div>
-    );
+  return (
+    <div className="single_product_header">
+      {product ? (
+        <>
+          {' '}
+          <Gallery photos={product.photos} />
+          <SingleProductDetails product={product} />
+        </>
+      ) : (
+        <p>Ürün bulunamadı</p>
+      )}
+    </div>
+  );
 };
