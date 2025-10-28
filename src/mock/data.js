@@ -1,13 +1,13 @@
 
 // Gozde / [AU-30] - Single Product Component Start
-export const singleProductData = [
+const singleProductData = [
     {
         id: 1,
         product_title: "asgaard-sofa",
         price: 250000,
         currencySymbol: "$",
         rating: {
-            stars: 4.5,
+            stars: 3,
             reviewCount: 5,
             reviewText: "5 Customer Review"
         },
@@ -29,4 +29,5 @@ export const singleProductData = [
         ]
     }
 ];
+export default singleProductData;
 // Gozde / [AU-30] - Single Product Component End
