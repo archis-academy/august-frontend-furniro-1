@@ -3,47 +3,58 @@
     align-items: center;
     font-size: 16px;
     max-width: 100%;
+    font-family: Poppins;
+
     a {
         text-decoration: none;
         color: #3A3A3A;
         font-weight: 600;
     }
+
     .crumb {
         display: flex;
         align-items: center;
         gap: 12px;
         line-height: 1;
     }
+
     &.three {
         background-color: #FCF8F3;
         padding: 15px 80px;
         width: 100%;
+
         .divider {
             display: inline-block;
-            width: 1px;
+            width: 2px;
             height: 37px;
             border: 1px solid #ACACAC;
             margin-right: 20px;
         }
+
         .current {
             font-weight: 400;
+
         }
+
         .link {
             color: #ACACAC;
             font-weight: 400;
         }
     }
+
     &.two {
         .current {
             font-weight: 300;
         }
     }
+
     img {
         margin: 0px 20px;
         display: inline-block;
         align-self: center;
     }
 }
+
 .breadCrumb a:hover {
     color: #1a1a1a;
 }

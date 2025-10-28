@@ -5,11 +5,6 @@
 }
 
 .full-bleed {
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    width: 100dvw;
-    box-sizing: border-box;
+    min-width: 100%;
+    margin-top: 30px;
 }
