@@ -7,6 +7,7 @@ import Shop from './pages/Shop';
 import Footer from './Components/Footer';
 import Contact from './pages/Contact';
 import CheckoutPage from './pages/checkout';
+import SingleProductPage from './pages/singleProduct';
 
 export const Router = () => {
   return (
@@ -19,6 +20,7 @@ export const Router = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/checkout" element={<CheckoutPage />}></Route>
+        <Route path="/shop/:product_title" element={<SingleProductPage />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
