@@ -1,14 +1,22 @@
+@use './styles/index.scss' as *;
+
 #root {
   margin: 0 auto;
   text-align: center;
 }
+
 @media (max-width: 768px) {
   #root {
     padding: 1rem;
   }
 }
+
 @media (max-width: 425px) {
   #root {
     padding: 0.5rem;
   }
+}
+
+html {
+  @include custom-scrollbar();
 }
