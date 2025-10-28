@@ -5,6 +5,7 @@
     padding: 15px;
     align-items: flex-start;
     text-align: left;
+    gap: 10px;
 
     h3 {
         font-size: 42px;
@@ -177,5 +178,6 @@
     .pd-section {
         width: 100%;
         max-width: none;
+        padding: 0 60px;
     }
 }
