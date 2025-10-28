@@ -4,8 +4,12 @@ import PageHeader from '../../Components/PageHeader'
 const CheckoutPage = () => {
     return (
         <div className='checkoutPage'>
-            <PageHeader />
-            <BillingDetailsForm />
+            <div>
+                <PageHeader />
+            </div>
+            <div>
+                <BillingDetailsForm />
+            </div>
         </div>
     )
 }
