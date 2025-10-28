@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './product-album.scss'
 
-export const Gallery = ({ photos = [] }) => {
+const Gallery = ({ photos = [] }) => {
     const [selectedPhoto, setSelectedPhoto] = useState(photos[0]);
 
     const thumbnailPhotos = photos.filter((p) => p.id !== selectedPhoto.id);
@@ -30,3 +30,4 @@ export const Gallery = ({ photos = [] }) => {
         </div>
     );
 };
+export default Gallery;
