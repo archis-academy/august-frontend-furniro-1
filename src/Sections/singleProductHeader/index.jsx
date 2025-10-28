@@ -13,11 +13,16 @@ export const SingleProductHeader = () => {
   );
 
   return (
-    <>
-      <div className="single_product_header">
-        <Gallery photos={product.photos} />
-        <SingleProductDetails product={product} />
-      </div>
-    </>
+    <div className="single_product_header">
+      {product ? (
+        <>
+          {' '}
+          <Gallery photos={product.photos} />
+          <SingleProductDetails product={product} />
+        </>
+      ) : (
+        <p>Ürün bulunamadı</p>
+      )}
+    </div>
   );
 };

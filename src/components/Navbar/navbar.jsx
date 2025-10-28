@@ -6,12 +6,14 @@ function Navbar() {
   return (
     <div className={styles.navContainer}>
       <div className={styles.navTitle}>
+        <a  className={styles.navIcon} href='/'>
         <div>
           <img src="/assets/icons/navbar/nav-icon.svg" alt="nav-icon" />
         </div>
         <div>
           <h1 className={styles.title}>Furniro.</h1>
         </div>
+        </a>
       </div>
       <div className={styles.navLinks}>
         <NavbarLink name="Home" page="/" />

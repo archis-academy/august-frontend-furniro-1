@@ -4,7 +4,7 @@ import './hero.scss'
 
 export default function Hero() {
     return (
-        <div className='hero-container'>
+        <div className='hero-container' aria-label='New Arrival - Hero'>
             <div className='hero-text'>
                 <span>New Arrival</span>
                 <h1>Discover Our New Collection</h1>
