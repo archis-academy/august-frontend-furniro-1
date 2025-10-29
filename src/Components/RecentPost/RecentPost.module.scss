@@ -5,17 +5,15 @@ body {
 .recentPost__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   font-family: i.$font-family-base;
-  padding: 16px 65px;
-  max-width: 400px;
+  padding: 16px 65px 16px 76px;
+  max-width: 393px;
+
   .recentPost__title {
     color: i.$dark;
-    font-weight: 500;
     font-size: 24px;
     line-height: 100%;
-    letter-spacing: 0%;
   }
   .recentPost__list {
     display: flex;
@@ -24,7 +22,6 @@ body {
     gap: 40px;
     .recentPost__item {
       display: flex;
-      justify-content: center;
       align-items: center;
       gap: 12px;
       .recentPost__info {
@@ -35,18 +32,14 @@ body {
         .recentPost__itemName {
           display: flex;
           flex-wrap: wrap;
-          justify-content: flex-start;
-          align-items: flex-start;
           color: i.$dark;
-          font-weight: 400;
           font-size: 14px;
+          text-align: left;
         }
         .recentPost__itemDate {
-          font-weight: 400;
           font-size: 12px;
           line-height: 100%;
-          letter-spacing: 0%;
-          color: #acacac;
+          color: i.$light;
         }
       }
     }

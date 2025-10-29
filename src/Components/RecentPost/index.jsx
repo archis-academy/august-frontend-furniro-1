@@ -4,23 +4,23 @@ import styles from './RecentPost.module.scss';
 export const RecentPost = () => {
   const data = [
     {
-      img: '/assets/recentPost/image_1.svg',
+      img: '/assets/images/recent-post/image_1.png',
       name: 'Going all-in with millennial design',
     },
     {
-      img: '/assets/recentPost/image_2.svg',
+      img: '/assets/images/recent-post/image_2.png',
       name: 'Exploring new ways of decorating',
     },
     {
-      img: '/assets/recentPost/image_3.svg',
+      img: '/assets/images/recent-post/image_3.png',
       name: 'Handmade pieces that took time to make',
     },
     {
-      img: '/assets/recentPost/image_4.svg',
+      img: '/assets/images/recent-post/image_4.png',
       name: 'Modern home in Milan',
     },
     {
-      img: '/assets/recentPost/image_5.svg',
+      img: '/assets/images/recent-post/image_5.png',
       name: 'Colorful office redesign',
     },
   ];
