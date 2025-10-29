@@ -12,7 +12,22 @@ export const Home = () => {
       <OurProductSection />
       <ExploreMoreSection />
       <FurnitureSection />
-      <BlogPost />
+      <BlogPost
+        image="/assets/images/blogpost/post.png"
+        title="Going all-in with millennial design"
+        category="Wood"
+      />
+
+      <BlogPost
+        image="/assets/images/blogpost/post_2.png"
+        title="Exploring new ways of decorating"
+        category="Handmade"
+      />
+      <BlogPost
+        image="/assets/images/blogpost/post_3.png"
+        title="Handmade pieces that took time to make"
+        category="Wood"
+      />
     </div>
   );
 };
