@@ -30,7 +30,7 @@ const BillingDetailsForm = () => {
                 </div>
                 <Input label="ZIP code"/>
                 <Input label="Phone" type="tel" />
-                <Input label="Email address" type="email" />
+                <Input label="Email address"type="email" />
                 <button type="button" className={styles.additionalInfoButton}>
                     Additional information
                 </button>

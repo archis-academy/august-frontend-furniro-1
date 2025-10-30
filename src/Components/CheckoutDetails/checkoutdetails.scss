@@ -1,0 +1,110 @@
+.checkoutCard {
+    max-width: 530px;
+    width: 100%;
+    background: #fff;
+    padding: 24px;
+    font-family: 'Poppins', sans-serif;
+    color: #3A3A3A;
+}
+
+.co-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f3f3;
+    font-size: 15px;
+}
+
+.checkoutHead {
+    font-weight: 500;
+    font-size: 24px;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 8px;
+}
+
+.co-muted {
+    color: #8d8d8d;
+    font-weight: 400;
+}
+
+.co-total {
+    border-bottom: none;
+    padding-top: 16px;
+}
+
+.co-total-amount {
+    color: #b88e2f;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+/* Ödeme yöntemleri alanı */
+.co-methods {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid #ebebeb;
+}
+
+.co-method {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 10px 0 4px;
+    color: #333;
+    font-size: 15px;
+}
+
+.co-disabled {
+    opacity: 0.6;
+}
+
+.co-help {
+    font-size: 16px;
+    color: #ACACAC;
+}
+
+.co-privacy {
+    font-size: 16px;
+    text-align: left;
+}
+
+.co-privacy a {
+    color: #333;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.co-place {
+    width: 40%;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid #3A3A3A;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-top: 20px;
+    align-items: start;
+}
+
+.co-place:hover {
+    background: #f8f8f8;
+}
+
+@media (max-width: 768px) {
+    .checkoutCard {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .co-row {
+        font-size: 14px;
+    }
+
+    .co-place {
+        height: 48px;
+        font-size: 15px;
+    }
+}
