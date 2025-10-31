@@ -4,6 +4,7 @@ import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
 import Navbar from './Components/Navbar/navbar';
 import Shop from './pages/Shop';
+import Contact from './pages/Contact';
 import Footer from './Components/Footer';
 import SingleProductPage from './pages/singleProduct';
 
@@ -17,7 +18,7 @@ export const Router = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/shop/:product_title" element={<SingleProduct />}></Route>
+        <Route path="/shop/:product_title" element={<SingleProductPage />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
