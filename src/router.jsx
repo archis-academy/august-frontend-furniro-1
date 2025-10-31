@@ -4,6 +4,7 @@ import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
 import Navbar from './Components/Navbar/navbar';
 import Shop from './pages/Shop';
+import Contact from './pages/Contact';
 import Footer from './Components/Footer';
 import Contact from './pages/Contact';
 import CheckoutPage from './pages/checkout';
