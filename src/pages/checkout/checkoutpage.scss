@@ -13,3 +13,9 @@
     gap: 50px;
     margin: 0 auto;
 }
+@media (max-width : 847px) {
+    .checkoutPage_grid {
+        flex-direction: column;
+        max-width: 100%;
+    }
+}

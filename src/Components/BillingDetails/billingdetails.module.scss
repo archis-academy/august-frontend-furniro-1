@@ -64,9 +64,8 @@
     outline: none;
 }
 
-@media (max-width: 600px) {
-    .row {
-        flex-direction: column;
-        gap: 0;
+@media (max-width: 847px) {
+    .formContainer {
+        min-width: 90%;
     }
 }
