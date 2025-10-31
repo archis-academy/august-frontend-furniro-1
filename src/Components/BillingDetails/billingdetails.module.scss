@@ -5,7 +5,6 @@
     text-align: start;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 70%;
     max-width: 650px;
     font-family: "Poppins";
     gap: 15px;
@@ -48,22 +47,22 @@
 }
 
 .additionalInfoButton {
+    display: flex;
+    width: 70%;
     background: none;
     border: 1px solid #ACACAC;
     border-radius: 15px;
-    padding: 25px 29px;
+    padding: 15px 29px;
     font-size: 16px;
     font-weight: 400;
     color: #ACACAC;
     cursor: pointer;
     margin-top: 25px;
     transition: background-color 0.2s;
-
-    &:hover {
-        background-color: #F8F8F8;
-    }
 }
-
+.additionalInfoButton:focus {
+    outline: none;
+}
 
 @media (max-width: 600px) {
     .row {

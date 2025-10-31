@@ -20,7 +20,7 @@ const CheckoutDetails = () => {
             </div>
             {cartItems.map((it) => (
                 <div className='co-row' key={it.id}>
-                    <span>{it.title} <span className="co-muted">X {it.qty}</span></span>
+                    <span className="co-product">{it.title} <span className="co-muted">X {it.qty}</span></span>
                     <span>
                         {currencySymbol} {money(it.price * it.qty)}
                     </span>
@@ -48,6 +48,7 @@ const CheckoutDetails = () => {
                     until the funds have cleared in our account.
                 </p>
                 <label className="co-method co-disabled">
+                    <input type="radio" name="pay" defaultChecked /> Direct Bank Transfer
                     <input type="radio" name="pay" /> Cash On Delivery
                 </label>
             </div>
@@ -55,7 +56,7 @@ const CheckoutDetails = () => {
             <p className="co-privacy">
                 Your personal data will be used to support your experience throughout this website,
                 to manage access to your account, and for other purposes described in our
-                <a href="#">privacy policy</a>.
+                <a href="#"> privacy policy</a>.
             </p>
 
             <button className="co-place">Place order</button>
