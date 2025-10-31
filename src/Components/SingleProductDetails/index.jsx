@@ -43,8 +43,8 @@ const SingleProductDetails = ({ product }) => {
     return (
         <section className='pd-section'>
             <h3>{product_title?.replace(/-/g, " ")}</h3>
-            <p>{currencySymbol} {Number(price || 0).toLocaleString("tr-TR")}</p>
-            <div>
+            <p className='pd__price'>{currencySymbol} {Number(price || 0).toLocaleString("tr-TR")}</p>
+            <div className='pd__rating_wrapper'>
                 {rating && (
                     <span className="pd__rating">
                         <Stars value={rating.stars} />
@@ -77,18 +77,19 @@ const SingleProductDetails = ({ product }) => {
                         min="1"
                         value={qty}
                         onChange={(e) => setQty(Math.max(1, Number(e.target.value || 1)))}
+                        aria-label='Quantity'
                     />
                     <button onClick={() => setQty((q) => q + 1)}>+</button>
                 </div>
 
-                <button className="pd__btn pd__btn--primary" onClick={handleAdd}>
+                <button className="pd__btn" onClick={handleAdd}>
                     Add To Cart
                 </button>
                 <button
                     className="pd__btn"
                     onClick={() => (onCompare ? onCompare(product) : console.log("COMPARE", product))}
                 >
-                    Compare
+                    +  Compare
                 </button>
             </div>
             <div className="pd__meta">

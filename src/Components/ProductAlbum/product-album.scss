@@ -1,6 +1,6 @@
 .gallery-container {
     display: flex;
-    max-width: 555px;
+    width: 50%;
     margin: 0 auto;
     gap: 20px;
     padding: 20px;
@@ -53,4 +53,24 @@
     width: 100%;
     height: auto;
     display: block;
+}
+
+
+@media (max-width: 768px) {
+    .gallery-container {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .featured-image-container {
+        width: 100%;
+    }
+
+    .featured-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
 }
