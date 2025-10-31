@@ -5,7 +5,9 @@ import Login from './pages/login';
 import Navbar from './Components/Navbar/navbar';
 import Shop from './pages/Shop';
 import Footer from './Components/Footer';
-import SingleProductPage from './pages/singleProduct';
+import SingleProduct from './pages/singleProduct';
+import Contact from './pages/Contact';
+import { Cart } from './pages/Cart';
 
 export const Router = () => {
   return (
@@ -18,6 +20,7 @@ export const Router = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop/:product_title" element={<SingleProduct />}></Route>
+        <Route path="/favorites" element={<Cart />} />
       </Routes>
       <Footer />
     </BrowserRouter>
