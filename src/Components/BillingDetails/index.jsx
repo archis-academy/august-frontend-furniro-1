@@ -6,7 +6,7 @@ const BillingDetailsForm = () => {
     return (
         <div className={styles.formContainer}>
             <h2 className={styles.heading}>
-                Billing Details
+                Billing details
             </h2>
             <form className={styles.formCard}>
                 <div className={styles.name}>
