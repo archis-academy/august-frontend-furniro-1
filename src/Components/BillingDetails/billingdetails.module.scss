@@ -1,11 +1,11 @@
 .formContainer {
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
     text-align: start;
     align-items: flex-start;
     justify-content: flex-start;
     max-width: 650px;
+    min-width: 460px;
     font-family: "Poppins";
     gap: 15px;
 }
