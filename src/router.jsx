@@ -5,7 +5,8 @@ import Login from './pages/login';
 import Navbar from './Components/Navbar/navbar';
 import Shop from './pages/Shop';
 import Footer from './Components/Footer';
-import SingleProductPage from './pages/singleProduct';
+import SingleProduct from './pages/singleProduct';
+import Contact from './pages/Contact';
 
 export const Router = () => {
   return (
