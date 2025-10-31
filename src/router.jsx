@@ -6,6 +6,8 @@ import Navbar from './Components/Navbar/navbar';
 import Shop from './pages/Shop';
 import Contact from './pages/Contact';
 import Footer from './Components/Footer';
+import Contact from './pages/Contact';
+import CheckoutPage from './pages/checkout';
 import SingleProductPage from './pages/singleProduct';
 
 export const Router = () => {
@@ -18,6 +20,7 @@ export const Router = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/checkout" element={<CheckoutPage />}></Route>
         <Route path="/shop/:product_title" element={<SingleProductPage />}></Route>
       </Routes>
       <Footer />
