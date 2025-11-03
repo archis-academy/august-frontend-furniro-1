@@ -37,6 +37,18 @@ export const SingleProductMoreInfo = () => {
           <div className={styles.desc}>
             <p>{desc1}</p>
             <p>{desc2}</p>
+            <div className={styles.imageWrapper}>
+              <img
+                className={styles.image_1}
+                src="/assets/images/single-product-morel/sofa_1.png"
+                alt="sofa1"
+              />
+              <img
+                className={styles.image_2}
+                src="/assets/images/single-product-morel/sofa_2.png"
+                alt="sofa2"
+              />
+            </div>
           </div>
         )}
 
@@ -63,10 +75,6 @@ export const SingleProductMoreInfo = () => {
             </ul>
           </div>
         )}
-      </div>
-      <div className={styles.imageWrapper}>
-        <img src="/assets/images/single-product-morel/sofa_1.png" alt="sofa1" />
-        <img src="/assets/images/single-product-morel/sofa_2.png" alt="sofa2" />
       </div>
     </div>
   );

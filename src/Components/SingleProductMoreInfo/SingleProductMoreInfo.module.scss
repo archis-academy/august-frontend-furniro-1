@@ -66,5 +66,10 @@ ul {
     img {
       background-color: i.$cream;
     }
+    @media (max-width: i.$desktop-m) {
+      .image_2 {
+        display: none;
+      }
+    }
   }
 }
