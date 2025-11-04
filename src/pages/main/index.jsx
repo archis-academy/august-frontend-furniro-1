@@ -11,6 +11,7 @@ export const Home = () => {
       <OurProductSection />
       <ExploreMoreSection />
       <FurnitureSection />
+
     </div>
   );
 };

@@ -1,0 +1,44 @@
+@use '../../styles/variables' as i;
+.recentPost__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: i.$font-family-base;
+  padding: 16px 65px 16px 76px;
+  max-width: 393px;
+
+  .recentPost__title {
+    color: i.$dark;
+    font-size: 24px;
+    line-height: 100%;
+  }
+  .recentPost__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    .recentPost__item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      .recentPost__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        .recentPost__itemName {
+          display: flex;
+          flex-wrap: wrap;
+          color: i.$dark;
+          font-size: 14px;
+          text-align: left;
+        }
+        .recentPost__itemDate {
+          font-size: 12px;
+          line-height: 100%;
+          color: i.$light;
+        }
+      }
+    }
+  }
+}
