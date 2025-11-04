@@ -1,0 +1,26 @@
+body {
+  background-color: white;
+}
+.container {
+  width: 99vw;
+  display: flex;
+  flex-direction: column;
+
+  .middlePart {
+    margin-top: 125px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    .leftPart {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+    .rightPart {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+}
