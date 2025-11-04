@@ -1,7 +1,7 @@
 import styles from './input.module.scss';
 // import '@fontsource/poppins';
 
-function input({ label, placeholder, type = 'text' }) {
+function Input({ label, placeholder, type = 'text'}) {
   return (
     <div className={styles.container}>
       <label className={styles.label}>{label}</label>
@@ -10,4 +10,4 @@ function input({ label, placeholder, type = 'text' }) {
   );
 }
 
-export default input;
+export default Input;

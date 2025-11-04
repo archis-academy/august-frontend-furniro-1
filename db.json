@@ -1,0 +1,161 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Syltherine",
+      "category": "Living Room",
+      "price": 2950,
+      "oldPrice": 3800,
+      "description": "Syltherine, modern ve minimalist tasarımıyla öne çıkan şık bir sandalyedir. Oturma odanızda veya çalışma alanınızda konfor ve estetiği bir araya getirir.",
+      "images": [
+        "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=1965&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1551291295-d317b21e4e04?q=80&w=1974&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1617103995292-6936938997a4?q=80&w=1964&auto=format&fit=crop"
+      ],
+      "isNew": true,
+      "discount": 30,
+      "sku": "SS001",
+      "tags": ["Chair", "Home", "Living Room"]
+    },
+    {
+      "id": "2",
+      "name": "Leviosa",
+      "category": "Living Room",
+      "price": 2500,
+      "oldPrice": 0,
+      "description": "Leviosa, her mekana uyum sağlayan zarif ve konforlu bir sandalyedir. Hem modern hem de klasik dekorasyon stilleriyle mükemmel bir uyum yakalar.",
+      "images": [
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2158&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=1974&auto=format&fit=crop"
+      ],
+      "isNew": false,
+      "discount": 0,
+      "sku": "SS002",
+      "tags": ["Chair", "Living Room"]
+    },
+    {
+      "id": "3",
+      "name": "Lolito",
+      "category": "Dining",
+      "price": 7800,
+      "oldPrice": 14000,
+      "description": "Geniş oturma alanı ve lüks kumaşıyla Lolito, aileniz ve misafirleriniz için maksimum konfor sunan büyük bir kanepedir.",
+      "images": [
+        "https://images.unsplash.com/photo-1540574163024-5735f35c235b?q=80&w=2070&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=2070&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1588422230154-1a7c8b0c6a85?q=80&w=1935&auto=format&fit=crop"
+      ],
+      "isNew": false,
+      "discount": 50,
+      "sku": "SS003",
+      "tags": ["Sofa", "Luxury", "Home"]
+    },
+    {
+      "id": "4",
+      "name": "Respira",
+      "category": "Outdoor",
+      "price": 5300,
+      "oldPrice": 0,
+      "description": "Respira, bahçenizde veya terasınızda keyifli anlar geçirmeniz için tasarlanmış, hava koşullarına dayanıklı minimalist bir dış mekan kanepesidir.",
+      "images": [
+        "https://images.unsplash.com/photo-1594013524438-e6d8a4a58d6b?q=80&w=1974&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1590326002235-6f17e76e1039?q=80&w=1964&auto=format&fit=crop"
+      ],
+      "isNew": true,
+      "discount": 0,
+      "sku": "SS004",
+      "tags": ["Outdoor", "Sofa", "Minimalist"]
+    },
+    {
+      "id": "5",
+      "name": "Grifo",
+      "category": "Bedroom",
+      "price": 1500,
+      "oldPrice": 0,
+      "description": "Grifo, yatak odanız için şık bir aydınlatma çözümü sunan modern bir gece lambasıdır. Kitap okumak için idealdir.",
+      "images": [
+        "https://images.unsplash.com/photo-1543198136-40848053086b?q=80&w=1974&auto=format&fit=crop"
+      ],
+      "isNew": false,
+      "discount": 0,
+      "sku": "SS005",
+      "tags": ["Lamp", "Bedroom", "Light"]
+    },
+    {
+      "id": "6",
+      "name": "Muggo",
+      "category": "Office",
+      "price": 3200,
+      "oldPrice": 0,
+      "description": "Ergonomik tasarımıyla Muggo, uzun saatler boyunca konforlu bir çalışma deneyimi sunan şık bir ofis sandalyesidir.",
+      "images": [
+        "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?q=80&w=1974&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1581539250439-c96689196d2c?q=80&w=1974&auto=format&fit=crop"
+      ],
+      "isNew": false,
+      "discount": 0,
+      "sku": "SS006",
+      "tags": ["Chair", "Office", "Ergonomic"]
+    },
+    {
+      "id": "7",
+      "name": "Pingky",
+      "category": "Living Room",
+      "price": 7000,
+      "oldPrice": 10000,
+      "description": "Eğlenceli ve rahat tasarımıyla Pingky, modern yaşam alanlarına renk katacak konforlu bir kanepedir.",
+      "images": [
+        "https://images.unsplash.com/photo-1582582624323-2c1ab41b7a63?q=80&w=2070&auto=format&fit=crop"
+      ],
+      "isNew": false,
+      "discount": 30,
+      "sku": "SS007",
+      "tags": ["Sofa", "Pink", "Fun"]
+    },
+    {
+      "id": "8",
+      "name": "Potty",
+      "category": "Bedroom",
+      "price": 500,
+      "oldPrice": 0,
+      "description": "Potty, minimalist ve şık tasarımıyla bitkilerinizi sergilemek için mükemmel bir saksıdır.",
+      "images": [
+        "https://images.unsplash.com/photo-1592150621744-aca64f48394a?q=80&w=1974&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1600166846100-75b871c26b61?q=80&w=1974&auto=format&fit=crop"
+      ],
+      "isNew": true,
+      "discount": 0,
+      "sku": "SS008",
+      "tags": ["Pot", "Plant", "Decoration"]
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Oturma Odanız İçin Mükemmel Kanepeyi Seçme Rehberi",
+      "author": "Elif Kaya",
+      "date": "2025-10-15",
+      "category": "Tasarım İpuçları",
+      "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2070&auto=format&fit=crop",
+      "content": "Bir oturma odasının kalbi şüphesiz kanepesidir. Hem konforlu hem de şık bir kanepe seçmek, mekanın tüm atmosferini değiştirebilir. Bu yazıda, doğru kanepeyi seçerken dikkat etmeniz gereken boyut, kumaş, stil ve renk gibi önemli faktörleri ele alacağız..."
+    },
+    {
+      "id": 2,
+      "title": "2025 Yılının Yükselen İç Mekan Tasarım Trendleri",
+      "author": "Ahmet Vural",
+      "date": "2025-09-28",
+      "category": "Trendler",
+      "image": "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=2127&auto=format&fit=crop",
+      "content": "Her yıl olduğu gibi bu yıl da iç mekan tasarım dünyasında yeni ve heyecan verici trendler ortaya çıkıyor. Sürdürülebilir materyaller, cesur renk paletleri ve çok fonksiyonlu mobilyalar 2025'in öne çıkanları arasında. Gelin bu trendlere daha yakından bakalım..."
+    },
+    {
+      "id": 3,
+      "title": "Küçük Alanlar İçin Akıllı Dekorasyon Fikirleri",
+      "author": "Zeynep Aydın",
+      "date": "2025-09-12",
+      "category": "Pratik Çözümler",
+      "image": "https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=2070&auto=format&fit=crop",
+      "content": "Küçük bir evde yaşamak, stilden ödün vermeniz gerektiği anlamına gelmez. Doğru mobilya ve aksesuarlarla küçük alanları hem ferah hem de işlevsel hale getirebilirsiniz. Bu yazımızda, size ilham verecek pratik fikirler sunuyoruz..."
+    }
+  ]
+}

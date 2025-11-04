@@ -4,10 +4,13 @@ import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
 import Navbar from './Components/Navbar/navbar';
 import Shop from './pages/Shop';
+import Contact from './pages/Contact';
 import Footer from './Components/Footer';
 import SingleProduct from './pages/singleProduct';
 import Contact from './pages/Contact';
 import { Cart } from './pages/Cart';
+import CheckoutPage from './pages/checkout';
+import SingleProductPage from './pages/singleProduct';
 
 export const Router = () => {
   return (
@@ -21,6 +24,8 @@ export const Router = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop/:product_title" element={<SingleProduct />}></Route>
         <Route path="/favorites" element={<Cart />} />
+        <Route path="/checkout" element={<CheckoutPage />}></Route>
+        <Route path="/shop/:product_title" element={<SingleProductPage />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
