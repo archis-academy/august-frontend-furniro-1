@@ -1,0 +1,75 @@
+@use '../../styles/variables' as i;
+ul {
+  list-style: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 0;
+  font-family: i.$font-family-base;
+  gap: 36px;
+
+  .tabComponent {
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+    margin-bottom: 20px;
+    font-family: i.$font-family-base;
+
+    a {
+      text-decoration: none;
+      font-size: 24px;
+      color: i.$light;
+      cursor: pointer;
+      padding-bottom: 10px;
+      position: relative;
+      transition: color 0.2s ease;
+      font-weight: 500;
+      line-height: 100%;
+
+      &:hover {
+        color: i.$dark;
+      }
+
+      &.active {
+        color: i.$dark;
+        border-bottom: 2px solid i.$dark;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .desc {
+      font-family: i.$font-family-base;
+
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      text-align: left;
+      font-size: 16px;
+      max-width: 1000px;
+      color: i.$light;
+      line-height: 1.6;
+    }
+  }
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    img {
+      background-color: i.$cream;
+    }
+    @media (max-width: i.$desktop-m) {
+      .image_2 {
+        display: none;
+      }
+    }
+  }
+}
