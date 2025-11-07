@@ -3,6 +3,8 @@ import FurnitureSection from '../../Components/FurnitureSection/index';
 import OurProductSection from '../../Sections/OurProductSection';
 import { TopCategories } from '../../Sections/TopCategories';
 
+
+
 export const Home = () => {
   return (
     <div>
@@ -11,7 +13,6 @@ export const Home = () => {
       <OurProductSection />
       <ExploreMoreSection />
       <FurnitureSection />
-
     </div>
   );
 };
