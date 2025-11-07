@@ -2,9 +2,9 @@ import { useParams } from "react-router-dom";
 import "./singleProductHeader.scss";
 import SingleProductDetails from "../../Components/SingleProductDetails";
 import Gallery from "../../Components/ProductAlbum";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const BASE_API_URL = "";
+const BASE_API_URL = "https://furniro-api-vd0v.onrender.com/products";
 
 export const SingleProductHeader = () => {
   const { product_title } = useParams();
