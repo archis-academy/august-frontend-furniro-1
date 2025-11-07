@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './BlogPost.module.scss';
-
+// export const BlogPost = ({ image, title, category, author, date, content }) => {
 export const BlogPost = ({ image, title, category }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 

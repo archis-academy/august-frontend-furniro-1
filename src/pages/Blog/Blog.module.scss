@@ -6,21 +6,27 @@ body {
   display: flex;
   flex-direction: column;
 
-  .middlePart {
+  .wrapper {
     margin-top: 125px;
     display: flex;
     justify-content: center;
     gap: 30px;
 
-    .leftPart {
+    .blogpost {
       display: flex;
       flex-direction: column;
-      gap: 50px;
     }
-    .rightPart {
+    .sidebar {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 100px;
     }
+  }
+  .buttons {
+    display: flex;
+    gap: 38px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
   }
 }
