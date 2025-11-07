@@ -1,0 +1,21 @@
+.checkoutPage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+}
+.checkoutPage_header {
+    width: 99vw;
+    margin-bottom: 50px;
+}
+.checkoutPage_grid {
+    display: flex;
+    gap: 50px;
+    margin: 40px auto;
+}
+@media (max-width : 847px) {
+    .checkoutPage_grid {
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
