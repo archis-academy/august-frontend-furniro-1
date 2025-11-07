@@ -7,7 +7,7 @@ import Shop from './pages/Shop';
 import Footer from './Components/Footer';
 import SingleProduct from './pages/singleProduct';
 import Contact from './pages/Contact';
-import { Cart } from './pages/Cart';
+import { Favorites } from './pages/Favorites';
 
 export const Router = () => {
   return (
@@ -20,7 +20,7 @@ export const Router = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop/:product_title" element={<SingleProduct />}></Route>
-        <Route path="/favorites" element={<Cart />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
       <Footer />
     </BrowserRouter>
