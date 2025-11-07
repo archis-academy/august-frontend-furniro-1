@@ -1,6 +1,3 @@
-body {
-  background-color: white;
-}
 .container {
   width: 99vw;
   display: flex;
@@ -12,7 +9,7 @@ body {
     justify-content: center;
     gap: 30px;
 
-    .blogpost {
+    .blogPost {
       display: flex;
       flex-direction: column;
     }

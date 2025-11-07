@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 import styles from './Blog.module.scss';
 import PageHeader from '../../Components/PageHeader';
@@ -10,31 +10,51 @@ import Buttons from '../../Components/Button/button.jsx';
 
 export const Blog = () => {
   const API_URL = 'https://furniro-api-vd0v.onrender.com/blogs';
-  const PAGE_SIZE = 3;
 
   const [blogs, setBlogs] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const PAGE_SIZE = 3;
+
   useEffect(() => {
     const fetchBlogs = async () => {
+      setLoading(true);
+      setError(null);
       try {
         const response = await fetch(API_URL);
-
-        if (!response.ok) {
-          throw new Error(`HTTP hatası Durum : ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
         const data = await response.json();
-        setBlogs(data);
-      } catch (error) {
-        setError(error.message);
+        setBlogs(Array.isArray(data) ? data : []);
+      } catch (err) {
+        setError(err.message);
+        setBlogs([]);
       } finally {
         setLoading(false);
       }
     };
     fetchBlogs();
   }, []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // butona basınca hafifce yukarı atsın
+  }, [pageNumber]);
+
+  const totalPages = useMemo(
+    () => Math.max(1, Math.ceil(blogs.length / PAGE_SIZE)),
+    [blogs.length],
+  );
+
+  const currentPage = Math.min(Math.max(1, pageNumber), totalPages);
+  const pageStart = (currentPage - 1) * PAGE_SIZE;
+
+  const pageItems = useMemo(
+    () => blogs.slice(pageStart, pageStart + PAGE_SIZE),
+    [blogs, pageStart],
+  );
+
+  const goToPage = (n) => setPageNumber(Math.min(Math.max(1, n), totalPages));
 
   return (
     <>
@@ -45,50 +65,55 @@ export const Blog = () => {
 
         <div className={styles.wrapper}>
           <div className={styles.blogPost}>
-            {/* <BlogPost /> bu kısımda gelen api a göre çekicez */}
-            <BlogPost
-              image="/assets/images/blogpost/post.png"
-              title="Going all-in with millennial design"
-              category="Wood"
-            />
+            {loading && <div>Loading...</div>}
+            {error && !loading && <div>Error: {error}</div>}
 
-            <BlogPost
-              image="/assets/images/blogpost/post_2.png"
-              title="Exploring new ways of decorating"
-              category="Handmade"
-            />
+            {!loading &&
+              !error &&
+              pageItems.map((item) => (
+                <BlogPost
+                  key={item.id ?? item.title}
+                  image={item.image}
+                  title={item.title}
+                  category={item.category}
+                  author={item.author}
+                  date={item.date}
+                  content={item.content}
+                />
+              ))}
 
-            <BlogPost
-              image="/assets/images/blogpost/post_3.png"
-              title="Handmade pieces that took time to make"
-              category="Wood"
-            />
+            {!loading && !error && pageItems.length === 0 && (
+              <div>No posts found.</div>
+            )}
           </div>
+
           <div className={styles.sidebar}>
             <BlogPostSorting />
             <RecentPost />
           </div>
         </div>
+
         <div className={styles.buttons}>
           <Buttons
-            variant={pageNumber === 1 ? 'primary' : 'secondary'}
+            variant={currentPage === 1 ? 'primary' : 'secondary'}
             text="1"
-            onClick={() => setPageNumber(1)}
+            onClick={() => goToPage(1)}
           />
           <Buttons
-            variant={pageNumber === 2 ? 'primary' : 'secondary'}
+            variant={currentPage === 2 ? 'primary' : 'secondary'}
             text="2"
-            onClick={() => setPageNumber(2)}
+            onClick={() => goToPage(2)}
           />
           <Buttons
-            variant={pageNumber === 3 ? 'primary' : 'secondary'}
+            variant={currentPage === 3 ? 'primary' : 'secondary'}
             text="3"
-            onClick={() => setPageNumber(3)}
+            onClick={() => goToPage(3)}
           />
           <Buttons
             variant="secondary"
             text="Next"
-            onClick={() => setPageNumber((prev) => prev + 1)}
+            onClick={() => goToPage(currentPage + 1)}
+            disabled={currentPage >= totalPages}
           />
         </div>
 
