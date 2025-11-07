@@ -23,7 +23,9 @@ export const Blog = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch(API_URL);
+        const response = await fetch(
+          API_URL + `?_page=${pageNumber}&_limit=${PAGE_SIZE}`,
+        );
         if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
         const data = await response.json();
         setBlogs(Array.isArray(data) ? data : []);
@@ -35,26 +37,15 @@ export const Blog = () => {
       }
     };
     fetchBlogs();
-  }, []);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // butona basınca hafifce yukarı atsın
   }, [pageNumber]);
 
-  const totalPages = useMemo(
-    () => Math.max(1, Math.ceil(blogs.length / PAGE_SIZE)),
-    [blogs.length],
-  );
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pageNumber]);
 
-  const currentPage = Math.min(Math.max(1, pageNumber), totalPages);
-  const pageStart = (currentPage - 1) * PAGE_SIZE;
-
-  const pageItems = useMemo(
-    () => blogs.slice(pageStart, pageStart + PAGE_SIZE),
-    [blogs, pageStart],
-  );
-
-  const goToPage = (n) => setPageNumber(Math.min(Math.max(1, n), totalPages));
+  if (loading) {
+    return <p>Loading</p>;
+  }
 
   return (
     <>
@@ -65,12 +56,11 @@ export const Blog = () => {
 
         <div className={styles.wrapper}>
           <div className={styles.blogPost}>
-            {loading && <div>Loading...</div>}
             {error && !loading && <div>Error: {error}</div>}
 
             {!loading &&
               !error &&
-              pageItems.map((item) => (
+              blogs.map((item) => (
                 <BlogPost
                   key={item.id ?? item.title}
                   image={item.image}
@@ -82,7 +72,7 @@ export const Blog = () => {
                 />
               ))}
 
-            {!loading && !error && pageItems.length === 0 && (
+            {!loading && !error && blogs.length === 0 && (
               <div>No posts found.</div>
             )}
           </div>
@@ -95,25 +85,25 @@ export const Blog = () => {
 
         <div className={styles.buttons}>
           <Buttons
-            variant={currentPage === 1 ? 'primary' : 'secondary'}
+            variant={pageNumber === 1 ? 'primary' : 'secondary'}
             text="1"
-            onClick={() => goToPage(1)}
+            onClick={() => setPageNumber(1)}
           />
           <Buttons
-            variant={currentPage === 2 ? 'primary' : 'secondary'}
+            variant={pageNumber === 2 ? 'primary' : 'secondary'}
             text="2"
-            onClick={() => goToPage(2)}
+            onClick={() => setPageNumber(2)}
           />
           <Buttons
-            variant={currentPage === 3 ? 'primary' : 'secondary'}
+            variant={pageNumber === 3 ? 'primary' : 'secondary'}
             text="3"
-            onClick={() => goToPage(3)}
+            onClick={() => setPageNumber(3)}
           />
           <Buttons
             variant="secondary"
             text="Next"
-            onClick={() => goToPage(currentPage + 1)}
-            disabled={currentPage >= totalPages}
+            onClick={() => setPageNumber(pageNumber + 1)}
+            disabled={pageNumber >= 3}
           />
         </div>
 
