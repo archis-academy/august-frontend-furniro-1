@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import "./singleProductHeader.scss";
 import SingleProductDetails from "../../Components/SingleProductDetails";
 import Gallery from "../../Components/ProductAlbum";
@@ -8,6 +8,9 @@ const BASE_API_URL = "https://furniro-api-vd0v.onrender.com/products";
 
 export const SingleProductHeader = () => {
   const { product_title } = useParams();
+  const [searchParams] = useSearchParams();
+
+  const id = searchParams.get('id');
 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -17,8 +20,7 @@ export const SingleProductHeader = () => {
     const fetchProduct = async () => {
       try {
         setLoading(true);
-        const urlSafeTitle = encodeURIComponent(product_title);
-        const response = await fetch(`${BASE_API_URL}/${urlSafeTitle}`);
+        const response = await fetch(`${BASE_API_URL}/${id}`);
 
         if (!response.ok) {
           if (response.status === 404) {
@@ -40,7 +42,7 @@ export const SingleProductHeader = () => {
       }
     };
     fetchProduct();
-  }, [product_title]);
+  }, [id]);
 
 
   if (loading) {
@@ -57,7 +59,7 @@ export const SingleProductHeader = () => {
 
   return (
     <div className="single_product_header">
-      <Gallery photos={product.photos} />
+      <Gallery photos={product.images} />
       <SingleProductDetails product={product} />
     </div>
   );

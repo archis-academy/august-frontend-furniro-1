@@ -12,8 +12,8 @@ const Gallery = ({ photos = [] }) => {
                 {thumbnailPhotos.map((photo) => (
                     <img
                         key={photo.id}
-                        src={photo.url}
-                        alt={photo.alt}
+                        src={photo?.url}
+                        alt={photo.alt}         
                         className="thumbnail"
                         onClick={() => setSelectedPhoto(photo)}
                     />
