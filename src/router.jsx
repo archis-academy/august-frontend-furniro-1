@@ -21,7 +21,7 @@ export const Router = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/comparison" element={<ProductComparison />} />
+        <Route path="/product-comparison" element={<ProductComparison />} />
         <Route path="/shop/:product_title" element={<SingleProduct />}></Route>
       </Routes>
       <Footer />
