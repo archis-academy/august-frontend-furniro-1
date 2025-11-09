@@ -10,7 +10,6 @@ function ShoppingMenuSection() {
     setShowFilters((prev) => !prev);
   };
 
-  // 🔹 Filters dışına tıklanırsa kapat
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (filterRef.current && !filterRef.current.contains(event.target)) {
@@ -22,7 +21,6 @@ function ShoppingMenuSection() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // 🔸 Dropdown (senin orijinal kısmın)
   const [menu, setMenu] = useState(false);
   const [selection, setSelection] = useState('Default');
   const selections = ['A to Z', 'Z to A', 'Price: Low to High', 'Price: High to Low'];
@@ -41,8 +39,6 @@ function ShoppingMenuSection() {
             <img src="assets/shopping-menu/vector.svg" alt="filter icon" />
           </div>
           <p onClick={toggleFilters}>Filter</p>
-
-          {/* 🪟 Filters componenti */}
           <div
             className={`${styles.filtersWrapper} ${showFilters ? styles.show : styles.hide}`}
           >

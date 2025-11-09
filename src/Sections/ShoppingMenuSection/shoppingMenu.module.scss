@@ -42,17 +42,14 @@ p{
     justify-content: center;
 }
 .dropdownWrapper {
-  position: relative;  // Menü pozisyonunun referansı
+  position: relative; 
   display: inline-block;
 }
 
 .dropdownMenu {
   position: absolute;
-  top: 100%;  // Butonun hemen altı
-  left: 0;
-  right: 0;
+  top: 100%; 
   margin-top: 5px;
-  padding: 0;
   list-style: none;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -84,7 +81,7 @@ p{
 
 .filtersWrapper {
   position: absolute;
-  top: 100%; /* Filter yazısının hemen altına */
+  top: 100%; 
   margin-top: 20px;
   background: white;
   border: 1px solid #ddd;
@@ -92,21 +89,18 @@ p{
   z-index: 50;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
-  /* 🔹 animasyon başlangıç hali */
   opacity: 0;
   transform: translateY(-5px);
   transition: all 0.25s ease;
-  pointer-events: none; /* kapalıyken tıklanamaz */
+  pointer-events: none; 
 }
 
-/* 🔹 görünür hali */
 .show {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
-/* 🔹 gizli hali */
 .hide {
   opacity: 0;
   transform: translateY(-5px);
