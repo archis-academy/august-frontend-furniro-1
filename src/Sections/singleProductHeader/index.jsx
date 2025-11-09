@@ -1,63 +1,9 @@
-import { useParams, useSearchParams } from 'react-router-dom';
 import './singleProductHeader.scss';
 import SingleProductDetails from '../../Components/SingleProductDetails';
 import Gallery from '../../Components/ProductAlbum';
-import { useEffect, useState } from 'react';
 
-const BASE_API_URL = 'https://furniro-api-vd0v.onrender.com/products';
-
-export const SingleProductHeader = () => {
-  const { product_title } = useParams();
-  const [searchParams] = useSearchParams();
-
-  const id = searchParams.get('id');
-
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-    
-        const response = await fetch(`${BASE_API_URL}/${id}`);
-
-        if (!response.ok) {
-          if (response.status === 404) {
-            throw new Error('Ürün bulunamadı (404).');
-          }
-          throw new Error(`HTTP hatası: ${response.status}`);
-        }
-
-        const apiData = await response.json();
-        setProduct(apiData);
-        setError(null);
-      } catch (err) {
-        console.error('Ürün çekme hatası:', err);
-        setError(
-          err.message ||
-            'Ürün bilgileri yüklenirken bilinmeyen bir hata oluştu.',
-        );
-        setProduct(null);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchProduct();
-  }, [id]);
-
-  if (loading) {
-    return <div className="single_product_header">Ürün yükleniyor...</div>;
-  }
-
-  if (error) {
-    return <div className="single_product_header">{error}</div>;
-  }
-
-  if (!product) {
-    return <div className="single_product_header">Ürün bulunamadı.</div>;
-  }
-
+export const SingleProductHeader = ({ product }) => {
+  if (!product) return null;
   return (
     <div className="single_product_header">
       <Gallery photos={product.images} />
