@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    gap:65px;
+}
+.button{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.text{
+    background-color: aquamarine;
+    width:223px;
+}
