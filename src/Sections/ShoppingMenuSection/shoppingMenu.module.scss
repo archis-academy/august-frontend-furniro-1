@@ -74,3 +74,41 @@ p{
     background-color: #f5f5f5;
   }
 }
+.filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.filtersWrapper {
+  position: absolute;
+  top: 100%; /* Filter yazısının hemen altına */
+  margin-top: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  z-index: 50;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  /* 🔹 animasyon başlangıç hali */
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: all 0.25s ease;
+  pointer-events: none; /* kapalıyken tıklanamaz */
+}
+
+/* 🔹 görünür hali */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* 🔹 gizli hali */
+.hide {
+  opacity: 0;
+  transform: translateY(-5px);
+  pointer-events: none;
+}
