@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import styles from './ProductCard.module.scss';
 
-function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4,item }) {
+function ProductCard({
+  variant = 'ribbon',
+  badgeText = 'NEW',
+  rating = 4,
+  item,
+}) {
   const [liked, setLiked] = useState(false);
   const totalStars = 5;
 
@@ -22,7 +27,11 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4,item })
 
           <img
             className={styles.image}
-            src={item?.images[0]}
+            src={item?.images[0]?.url}
+            onError={(e) => {
+              e.currentTarget.src =
+              item?.images[1]?.url; 
+            }}
             alt="Syltherine"
           />
 
@@ -74,13 +83,17 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4,item })
 
       <div className={styles.productDetails}>
         <div className={styles.productName}>{item?.name}</div>
-        <div className={styles.productDesc}>{item?.description.slice(0,30)}...</div>
+        <div className={styles.productDesc}>
+          {item?.description.slice(0, 30)}...
+        </div>
 
         <div className={styles.productStars}>
           {Array.from({ length: totalStars }, (_, i) => (
             <span
               key={i}
-              className={i < item.rating.stars ? styles.starFilled : styles.starEmpty}
+              className={
+                i < item.rating.stars ? styles.starFilled : styles.starEmpty
+              }
             >
               ★
             </span>

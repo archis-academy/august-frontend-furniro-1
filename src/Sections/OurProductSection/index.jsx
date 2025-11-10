@@ -5,8 +5,7 @@ import { BestSellersList } from '../../Components/BestSellers';
 import { useState, useEffect } from 'react';
 
 function OurProductSection({ showTitle = true }) {
-  const API_URL =
-    'https://furniro-api-vd0v.onrender.com/products';
+  const API_URL = 'https://furniro-api-vd0v.onrender.com/products';
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, seterror] = useState(null);
@@ -32,7 +31,7 @@ function OurProductSection({ showTitle = true }) {
   if (loading) {
     return <div>Ürünler yükleniyor, lütfen bekleyin...</div>;
   }
-   if (error) {
+  if (error) {
     return <div>Bir hata oluştu: {error}</div>;
   }
 
