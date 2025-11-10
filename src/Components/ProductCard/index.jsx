@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './ProductCard.module.scss';
 
-function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
+function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4,item }) {
   const [liked, setLiked] = useState(false);
   const totalStars = 5;
 
@@ -22,7 +22,7 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
 
           <img
             className={styles.image}
-            src="/assets/icons/product/cardImage.svg"
+            src={item?.images[0]}
             alt="Syltherine"
           />
 
@@ -73,14 +73,14 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
       </div>
 
       <div className={styles.productDetails}>
-        <div className={styles.productName}>Syltherine</div>
-        <div className={styles.productDesc}>Stylish cafe chair</div>
+        <div className={styles.productName}>{item?.name}</div>
+        <div className={styles.productDesc}>{item?.description.slice(0,30)}...</div>
 
         <div className={styles.productStars}>
           {Array.from({ length: totalStars }, (_, i) => (
             <span
               key={i}
-              className={i < rating ? styles.starFilled : styles.starEmpty}
+              className={i < item.rating.stars ? styles.starFilled : styles.starEmpty}
             >
               ★
             </span>
@@ -88,8 +88,8 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', rating = 4 }) {
         </div>
 
         <div className={styles.prices}>
-          <span className={styles.discountPrice}>$ 120</span>
-          <span className={styles.originalPrice}>$ 150</span>
+          <span className={styles.discountPrice}>{item?.price}</span>
+          <span className={styles.originalPrice}>{item?.oldPrice}</span>
         </div>
       </div>
     </div>

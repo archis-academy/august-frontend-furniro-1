@@ -3,6 +3,7 @@ import ProductCard from '../ProductCard';
 import Buttons from '../Button/button';
 import styles from './OurProduct.module.scss';
 
+
 const order = [
   'NEW',
   'NEW',
@@ -21,7 +22,7 @@ const order = [
 const makeBadges = (count) =>
   Array.from({ length: count }, (_, i) => order[i % 12]);
 
-function OurProduct({ showTitle }) {
+function OurProduct({ showTitle,products }) {
   const [showMore, setShowMore] = useState(false);
   const visibleCount = showMore ? 24 : 12;
   const badges = makeBadges(visibleCount);
@@ -31,12 +32,13 @@ function OurProduct({ showTitle }) {
   return (
     <section className={styles.container}>
       <div className={styles.grid}>
-        {badges.map((badge, i) => (
+        {products.map((item, i) => (
           <ProductCard
             key={i}
-            variant={badge === 'NEW' ? 'ribbon' : 'pill'}
-            badgeText={badge}
+            variant={item === 'NEW' ? 'ribbon' : 'pill'}
+            badgeText={"NEW"}
             rating={4}
+            item={item}
           />
         ))}
       </div>
