@@ -6,20 +6,21 @@ function Navbar() {
   return (
     <div className={styles.navContainer}>
       <div className={styles.navTitle}>
-        <a  className={styles.navIcon} href='/'>
-        <div>
-          <img src="/assets/icons/navbar/nav-icon.svg" alt="nav-icon" />
-        </div>
-        <div>
-          <h1 className={styles.title}>Furniro.</h1>
-        </div>
+        <a className={styles.navIcon} href="/">
+          <div>
+            <img src="/assets/icons/navbar/nav-icon.svg" alt="nav-icon" />
+          </div>
+          <div>
+            <h1 className={styles.title}>Furniro.</h1>
+          </div>
         </a>
       </div>
       <div className={styles.navLinks}>
         <NavbarLink name="Home" page="/" />
         <NavbarLink name="Shop" page="/shop" />
-        <NavbarLink name="About" page="/about" />
+        <NavbarLink name="Profile" page="/profile" />
         <NavbarLink name="Contact" page="/contact" />
+        <NavbarLink name="Blog" page="/blog" />
       </div>
 
       <Actions />

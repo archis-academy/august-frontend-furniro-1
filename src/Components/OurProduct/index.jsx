@@ -3,6 +3,7 @@ import ProductCard from '../ProductCard';
 import Buttons from '../Button/button';
 import styles from './OurProduct.module.scss';
 
+
 const order = [
   'NEW',
   'NEW',
