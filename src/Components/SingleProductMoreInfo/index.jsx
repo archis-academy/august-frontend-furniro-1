@@ -90,10 +90,10 @@ export const SingleProductMoreInfo = ({ product }) => {
               <p>There are no reviews yet.</p>
             ) : (
               <ul>
-                {reviewsToShow.map((r, i) => (
+                {reviews.map((r, i) => (
                   <li key={r.id ?? i}>
-                    <span>{'⭐'.repeat(Math.max(0, Math.min(5, r.rating || 0)))}</span>{' '}
                     <strong>{r.author || 'Anonymous'}</strong>: {r.comment}
+                    <span>{'⭐'.repeat(Math.max(0, Math.min(5, r.rating || 0)))}</span>{' '}
                   </li>
                 ))}
               </ul>
