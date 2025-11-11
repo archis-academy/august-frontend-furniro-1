@@ -9,6 +9,8 @@ import Footer from './Components/Footer';
 import Contact from './pages/Contact';
 import Profile from './pages/profile';
 import { Blog } from './pages/blog';
+import SingleProductPage from './pages/singleProduct';
+import CheckoutPage from './pages/checkout'
 
 export const Router = () => {
   return (
