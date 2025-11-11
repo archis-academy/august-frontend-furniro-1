@@ -18,7 +18,7 @@ function Navbar() {
       <div className={styles.navLinks}>
         <NavbarLink name="Home" page="/" />
         <NavbarLink name="Shop" page="/shop" />
-        <NavbarLink name="About" page="/about" />
+        <NavbarLink name="Profile" page="/profile" />
         <NavbarLink name="Contact" page="/contact" />
       </div>
 

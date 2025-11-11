@@ -1,0 +1,29 @@
+.container {
+  width: 99vw;
+  display: flex;
+  flex-direction: column;
+
+  .wrapper {
+    margin-top: 125px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    .blogPost {
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+    }
+  }
+  .buttons {
+    display: flex;
+    gap: 38px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
+  }
+}
