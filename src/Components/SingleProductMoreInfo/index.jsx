@@ -1,78 +1,103 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './SingleProductMoreInfo.module.scss';
 
-export const SingleProductMoreInfo = () => {
-  const desc1 =
-    'Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.';
-  const desc2 =
-    'Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced.The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.';
+export const SingleProductMoreInfo = ({ product }) => {
+  const more = product?.moreInfo;
+  const description = Array.isArray(more?.description) && more.description.length > 0
+    ? more.description
+    : [product?.description || 'No description available.'];
+
+  const descriptionImages = Array.isArray(more?.descriptionImages) && more.descriptionImages.length > 0
+    ? more.descriptionImages
+    : Array.isArray(product?.images)
+      ? product.images.slice(0, 2)
+      : [];
+
+  const additionalInfo = Array.isArray(more?.additionalInfo) ? more.additionalInfo : [];
+
+  const reviews = Array.isArray(more?.reviews) ? more.reviews : [];
+  const reviewsCount = reviews.length;
+
   const [activeTab, setActiveTab] = useState('description');
-
-  const handleClick = (e, tab) => {
-    e.preventDefault();
-    setActiveTab(tab);
-  };
-
-  const tabs = [
-    { id: 'description', label: 'Description' },
-    { id: 'info', label: 'Additional Information' },
-    { id: 'reviews', label: 'Reviews [5]' },
-  ];
 
   return (
     <div className={styles.container}>
       <div className={styles.tabComponent}>
-        {tabs.map((tab) => (
-          <a
-            key={tab.id}
-            className={activeTab === tab.id ? styles.active : ''}
-            onClick={(e) => handleClick(e, tab.id)}
-          >
-            {tab.label}
-          </a>
-        ))}
+        <button
+          className={activeTab === 'description' ? styles.active : ''}
+          onClick={() => setActiveTab('description')}
+          type="button"
+        >
+          Description
+        </button>
+        <button
+          className={activeTab === 'info' ? styles.active : ''}
+          onClick={() => setActiveTab('info')}
+          type="button"
+        >
+          Additional Information
+        </button>
+        <button
+          className={activeTab === 'reviews' ? styles.active : ''}
+          onClick={() => setActiveTab('reviews')}
+          type="button"
+        >
+          Reviews [{reviewsCount}]
+        </button>
       </div>
+
       <div className={styles.content}>
         {activeTab === 'description' && (
           <div className={styles.desc}>
-            <p>{desc1}</p>
-            <p>{desc2}</p>
-            <div className={styles.imageWrapper}>
-              <img
-                className={styles.image_1}
-                src="/assets/images/single-product-morel/sofa_1.png"
-                alt="sofa1"
-              />
-              <img
-                className={styles.image_2}
-                src="/assets/images/single-product-morel/sofa_2.png"
-                alt="sofa2"
-              />
-            </div>
+            {description.map((text, i) => (
+              <p key={i}>{text}</p>
+            ))}
+
+            {descriptionImages.length > 0 && (
+              <div className={styles.imageWrapper}>
+                {descriptionImages.map((img, i) => (
+                  <img
+                    key={img.id ?? i}
+                    className={i === 0 ? styles.image_1 : styles.image_2}
+                    src={img.url || img}
+                    alt={img.alt || `desc_${i + 1}`}
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+            )}
           </div>
         )}
 
         {activeTab === 'info' && (
-          <div>
-            <p>
-              <strong>Material:</strong> Linen and wood
-            </p>
-            <p>
-              <strong>Dimensions:</strong> 200 x 150 x 80 cm
-            </p>
-            <p>
-              <strong>Color:</strong> Beige
-            </p>
+          <div className={styles.infoList}>
+            {additionalInfo.length === 0 ? (
+              <p>No additional information.</p>
+            ) : (
+              additionalInfo.map((row, i) => (
+                <p key={i}>
+                  <strong>{row.key}:</strong> {row.value}
+                </p>
+              ))
+            )}
           </div>
         )}
 
         {activeTab === 'reviews' && (
-          <div>
-            <h4>Customer Reviews (5)</h4>
-            <ul>
-              <li>⭐️⭐️⭐️⭐️⭐️ Great product! Very comfortable.</li>
-              <li>⭐️⭐️⭐️⭐️ Good quality, but delivery was late.</li>
-            </ul>
+          <div className={styles.reviews}>
+            <h4>Customer Reviews ({reviewsCount})</h4>
+            {reviewsCount === 0 ? (
+              <p>There are no reviews yet.</p>
+            ) : (
+              <ul>
+                {reviews.map((r, i) => (
+                  <li key={r.id ?? i}>
+                    <strong>{r.author || 'Anonymous'}</strong>: {r.comment}
+                    <span>{'⭐'.repeat(Math.max(0, Math.min(5, r.rating || 0)))}</span>{' '}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         )}
       </div>

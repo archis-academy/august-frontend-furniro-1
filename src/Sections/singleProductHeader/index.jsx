@@ -1,28 +1,13 @@
-import { useParams } from "react-router-dom";
-import "./singleProductHeader.scss";
-import singleProductData from "../../mock/data";
-import SingleProductDetails from "../../Components/SingleProductDetails";
-import Gallery from "../../Components/ProductAlbum";
+import './singleProductHeader.scss';
+import SingleProductDetails from '../../Components/SingleProductDetails';
+import Gallery from '../../Components/ProductAlbum';
 
-
-export const SingleProductHeader = () => {
-  const { product_title } = useParams();
-
-  const product = singleProductData.find(
-    (p) => p.product_title === product_title,
-  );
-
+export const SingleProductHeader = ({ product }) => {
+  if (!product) return null;
   return (
     <div className="single_product_header">
-      {product ? (
-        <>
-          {' '}
-          <Gallery photos={product.photos} />
-          <SingleProductDetails product={product} />
-        </>
-      ) : (
-        <p>Ürün bulunamadı</p>
-      )}
+      <Gallery photos={product.images} />
+      <SingleProductDetails product={product} />
     </div>
   );
 };

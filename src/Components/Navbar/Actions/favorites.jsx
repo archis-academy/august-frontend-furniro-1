@@ -17,7 +17,7 @@ function Favorites({ toggle, setToggle }) {
   return (
     <div className={styles.icon}>
       <img
-        src="assets/icons/navbar/like.svg"
+        src="/assets/icons/navbar/like.svg"
         alt="like icon"
         onClick={(e) => {
           e.stopPropagation(); 
@@ -32,7 +32,7 @@ function Favorites({ toggle, setToggle }) {
         >
           <div className={styles.title}>
             Shopping Card
-            <img src="assets/icons/navbar/lock.svg" alt="lock" />
+            <img src="/assets/icons/navbar/lock.svg" alt="lock" />
           </div>
 
           <hr className={styles.line}></hr>
@@ -47,7 +47,7 @@ function Favorites({ toggle, setToggle }) {
                   <div>{product.title}</div>
                 </div>
                 <div className={styles.vector}>
-                  <img src="assets/icons/navbar/vector.svg" alt="remove" />
+                  <img src="/assets/icons/navbar/vector.svg" alt="remove" />
                 </div>
               </div>
             ))}
