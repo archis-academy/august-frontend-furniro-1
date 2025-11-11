@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ProductCard from '../ProductCard';
 import Buttons from '../Button/button';
 import styles from './OurProduct.module.scss';
@@ -24,7 +24,7 @@ const makeBadges = (count) =>
 
 function OurProduct({ showTitle,products }) {
   const [showMore, setShowMore] = useState(false);
-  const visibleCount = showMore ? 24 : 12;
+  const visibleCount = showMore ? 24 : 6;
   const badges = makeBadges(visibleCount);
 
   const [pageNumber, setPageNumber] = useState(1);
@@ -53,28 +53,29 @@ function OurProduct({ showTitle,products }) {
           />
           </div>
         ) : (
-          <div className={styles.shopBtn}>
-            <Buttons
-              variant={pageNumber === 1 ? 'primary' : 'secondary'}
-              text="1"
-              onClick={() => setPageNumber(1)}
-            />
-            <Buttons
-              variant={pageNumber === 2 ? 'primary' : 'secondary'}
-              text="2"
-              onClick={() => setPageNumber(2)}
-            />
-            <Buttons
-              variant={pageNumber === 3 ? 'primary' : 'secondary'}
-              text="3"
-              onClick={() => setPageNumber(3)}
-            />
-            <Buttons
-              variant="secondary"
-              text="Next"
-              onClick={() => setPageNumber((prev) => prev + 1)}
-            />
-          </div>
+          <div className={styles.buttons}>
+          <Buttons
+            variant={pageNumber === 1 ? 'primary' : 'secondary'}
+            text="1"
+            onClick={() => setPageNumber(1)}
+          />
+          <Buttons
+            variant={pageNumber === 2 ? 'primary' : 'secondary'}
+            text="2"
+            onClick={() => setPageNumber(2)}
+          />
+          <Buttons
+            variant={pageNumber === 3 ? 'primary' : 'secondary'}
+            text="3"
+            onClick={() => setPageNumber(3)}
+          />
+          <Buttons
+            variant="secondary"
+            text="Next"
+            onClick={() => setPageNumber(pageNumber + 1)}
+            disabled={pageNumber >= 3}
+          />
+        </div>
         )}
       </div>
     </section>
