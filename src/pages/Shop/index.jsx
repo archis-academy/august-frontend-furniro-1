@@ -13,7 +13,7 @@ function Shop() {
     <div className={styles.shopContainer}>
       <PageHeader />
       <ShoppingMenuSection />
-      <OurProductSection showTitle={false} />
+      <OurProductSection showTitle={true} />
       <FeaturesSection />
     </div>
   );

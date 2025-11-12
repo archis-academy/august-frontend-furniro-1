@@ -51,32 +51,33 @@ function OurProductSection({ showTitle = true }) {
             <BestSellersList />
           </div>
         </aside>
-
-        <div className={styles.ourProductWrap}>
-          <OurProduct showTitle={showTitle} products={products} />
-        </div>
-        <div className={styles.buttons}>
-          <Buttons
-            variant={pageNumber === 1 ? 'primary' : 'secondary'}
-            text="1"
-            onClick={() => setPageNumber(1)}
-          />
-          <Buttons
-            variant={pageNumber === 2 ? 'primary' : 'secondary'}
-            text="2"
-            onClick={() => setPageNumber(2)}
-          />
-          <Buttons
-            variant={pageNumber === 3 ? 'primary' : 'secondary'}
-            text="3"
-            onClick={() => setPageNumber(3)}
-          />
-          <Buttons
-            variant="secondary"
-            text="Next"
-            onClick={() => setPageNumber(pageNumber + 1)}
-            disabled={pageNumber >= 3}
-          />
+        <div className={styles.btnWrapper}>
+          <div className={styles.ourProductWrap}>
+            <OurProduct showTitle={showTitle} products={products} />
+          </div>
+          <div className={styles.buttons}>
+            <Buttons
+              variant={pageNumber === 1 ? 'primary' : 'secondary'}
+              text="1"
+              onClick={() => setPageNumber(1)}
+            />
+            <Buttons
+              variant={pageNumber === 2 ? 'primary' : 'secondary'}
+              text="2"
+              onClick={() => setPageNumber(2)}
+            />
+            <Buttons
+              variant={pageNumber === 3 ? 'primary' : 'secondary'}
+              text="3"
+              onClick={() => setPageNumber(3)}
+            />
+            <Buttons
+              variant="secondary"
+              text="Next"
+              onClick={() => setPageNumber(pageNumber + 1)}
+              disabled={pageNumber >= 3}
+            />
+          </div>
         </div>
       </div>
     </section>
