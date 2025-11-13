@@ -5,6 +5,7 @@ const Gallery = ({ photos = [] }) => {
     const [selectedPhoto, setSelectedPhoto] = useState(photos[0]);
 
     const thumbnailPhotos = photos.filter((p) => p.id !== selectedPhoto.id);
+    console.log("thums", thumbnailPhotos);
 
     return (
         <div className="gallery-container">
@@ -12,7 +13,7 @@ const Gallery = ({ photos = [] }) => {
                 {thumbnailPhotos.map((photo) => (
                     <img
                         key={photo.id}
-                        src={photo.url}
+                        src={photo?.url}
                         alt={photo.alt}
                         className="thumbnail"
                         onClick={() => setSelectedPhoto(photo)}
