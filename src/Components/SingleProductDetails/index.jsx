@@ -22,7 +22,7 @@ const socialLinks = [
 
 const SingleProductDetails = ({ product }) => {
     const {
-        product_title,
+        name,
         price,
         currencySymbol = "$",
         rating,
@@ -42,7 +42,7 @@ const SingleProductDetails = ({ product }) => {
     };
     return (
         <section className='pd-section'>
-            <h3>{product_title?.replace(/-/g, " ")}</h3>
+            <h3>{name?.replace(/-/g, " ")}</h3>
             <p className='pd__price'>{currencySymbol} {Number(price || 0).toLocaleString("tr-TR")}</p>
             <div className='pd__rating_wrapper'>
                 {rating && (

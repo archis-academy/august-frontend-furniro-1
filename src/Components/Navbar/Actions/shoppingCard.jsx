@@ -4,7 +4,7 @@ function ShoppingCard({ toggle, setToggle }) {
   return (
     <div className={styles.icon}>
       <img
-        src="assets/icons/navbar/basket.svg"
+        src="/assets/icons/navbar/basket.svg"
         alt="profile icon"
         onClick={(e) => {
           e.stopPropagation(); 
