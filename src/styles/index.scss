@@ -1,2 +1,37 @@
 @forward './_variables.scss';
 @forward './_mixins.scss';
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit; /* Rengi ebeveyninden miras al */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+  background-color: transparent; /* (Gerekirse) Arka planı temizle */
+}
+
+/* Ziyaret edilmiş linklerin de aynı görünmesini sağlar */
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Üzerine gelme (hover), odaklanma (focus) ve aktif durumları için de istersen stil ekleyebilirsin */
+a:hover,
+a:focus,
+a:active {
+  /* Genellikle hover durumunu belirtmek istenir */
+  /* Örnek: text-decoration: underline; */
+}

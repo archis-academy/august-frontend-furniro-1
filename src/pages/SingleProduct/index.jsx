@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 
 const BASE_API_URL = 'https://furniro-api-vd0v.onrender.com/products';
 const SingleProductPage = () => {
-
   const [searchParams] = useSearchParams();
   const id = searchParams.get('id');
 
@@ -17,6 +16,11 @@ const SingleProductPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
     let ignore = false;
     (async () => {
       try {
@@ -32,14 +36,18 @@ const SingleProductPage = () => {
         }
       } catch (err) {
         if (!ignore) {
-          setError(err.message || 'Ürün bilgileri yüklenirken bir hata oluştu.');
+          setError(
+            err.message || 'Ürün bilgileri yüklenirken bir hata oluştu.',
+          );
           setProduct(null);
         }
       } finally {
         if (!ignore) setLoading(false);
       }
     })();
-    return () => { ignore = true; };
+    return () => {
+      ignore = true;
+    };
   }, [id]);
 
   if (loading) return <div className="spp-wrapper">Ürün yükleniyor...</div>;
@@ -58,7 +66,7 @@ const SingleProductPage = () => {
         <SingleProductMoreInfo product={product} />
       </div>
       <div>
-        <RelatedProducts />
+        <RelatedProducts currentProductId={id} />
       </div>
     </div>
   );
