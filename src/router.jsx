@@ -9,6 +9,7 @@ import Footer from './Components/Footer';
 import Contact from './pages/Contact';
 import Profile from './pages/profile';
 import { Blog } from './pages/blog';
+import { Favorites } from './pages/Favorites';
 import CheckoutPage from './pages/checkout';
 import SingleProductPage from './pages/singleProduct';
 
@@ -29,6 +30,7 @@ export const Router = () => {
         ></Route>
         <Route path="/blog" element={<Blog />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/shop/:product_title" element={<SingleProduct />}></Route>
       </Routes>
       <Footer />
