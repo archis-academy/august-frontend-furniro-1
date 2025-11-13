@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ProductCard.module.scss';
+import { useCart } from '../../context/CartContext';
 
 function ProductCard({ variant = 'ribbon', badgeText = 'NEW', item }) {
   const [liked, setLiked] = useState(false);
   const totalStars = 5;
-
+  const {addToCart} = useCart()
+ 
   const slugify = (text) => {
     if (!text) return ''; // text yoksa boş string dön
     return text
@@ -76,7 +78,7 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', item }) {
             <button
               type="button"
               className={styles.actionBtn}
-              aria-label="Add to cart"
+              onClick={()=> addToCart(item)}
             >
               <img
                 className={styles.shopIcon}
