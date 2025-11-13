@@ -80,8 +80,8 @@ export default function Filters() {
 
       <div className={styles.section}>
         <h3>Customer Rating</h3>
-        {ratings.map((rating) => (
-          <label key={rating} className={styles.ratingOption}>
+        {ratings.map((rating, index) => (
+          <label key={index} className={styles.ratingOption}>
             <input
               type="checkbox"
               checked={selectedRatings.includes(rating)}

@@ -10,9 +10,9 @@ function FurnitureSection() {
     { id: 3, image: './assets/furniture/furniture3.png' },
     { id: 4, image: './assets/furniture/furniture4.png' },
     { id: 5, image: './assets/furniture/furniture5.png' },
-     { id: 2, image: './assets/furniture/furniture2.png' },
-    { id: 3, image: './assets/furniture/furniture3.png' },
-    { id: 4, image: './assets/furniture/furniture4.png' },
+    { id: 6, image: './assets/furniture/furniture2.png' },
+    { id: 7, image: './assets/furniture/furniture3.png' },
+    { id: 8, image: './assets/furniture/furniture4.png' },
   ];
   return (
     <div>
@@ -22,7 +22,7 @@ function FurnitureSection() {
       <div>
         <h1>#FurniroFurniture</h1>
       </div>
-     <Wrapper />
+      <Wrapper />
       <div className={styles.container}>
         {slides.map((slide) => (
           <div key={slide.id} className={styles.card}>

@@ -21,7 +21,7 @@ const BreadCrumb = () => {
                 const last = i === crumbs.length - 1;
                 const divider = crumbs.length > 2 && i === crumbs.length - 2;
                 return (
-                    <span key={c.path} className="crumb">
+                    <span key={i} className="crumb">
                         {last ? (
                             <span className="current">{c.name}</span>
                         ) : (

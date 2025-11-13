@@ -16,7 +16,7 @@ function OurProduct({ products }) {
                   ? `${item?.discount}%`
                   : '10%'
             }
-            rating={4}
+            rating={item?.rating?.stars}
             item={item}
           />
         ))}
