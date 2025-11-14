@@ -1,3 +1,4 @@
+import { useCart } from '../../context/CartContext';
 import './singleproduct.scss';
 import { useState } from 'react';
 
@@ -21,6 +22,8 @@ const socialLinks = [
 ];
 
 const SingleProductDetails = ({ product }) => {
+  const { addToCart } = useCart();
+
   const {
     name,
     price,
@@ -38,10 +41,6 @@ const SingleProductDetails = ({ product }) => {
   );
   const [qty, setQty] = useState(1);
 
-  const handleAdd = () => {
-    const payload = { product, qty, selectedColor };
-    onAddToCart ? onAddToCart(payload) : console.log('ADD_TO_CART', payload);
-  };
   return (
     <section className="pd-section">
       <h3>{name?.replace(/-/g, ' ')}</h3>
@@ -86,7 +85,7 @@ const SingleProductDetails = ({ product }) => {
           <button onClick={() => setQty((q) => q + 1)}>+</button>
         </div>
 
-        <button className="pd__btn" onClick={handleAdd}>
+        <button className="pd__btn" onClick={() => addToCart(product)}>
           Add To Cart
         </button>
         <button
