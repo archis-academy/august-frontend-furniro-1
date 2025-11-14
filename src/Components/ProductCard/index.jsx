@@ -2,15 +2,23 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ProductCard.module.scss';
 import { useCart } from '../../context/CartContext';
+import { useFavorites } from '../../context/FavoriteContext';
 
-function ProductCard({
-  variant = 'ribbon',
-  badgeText = 'NEW',
-  item,
-}) {
-  const [liked, setLiked] = useState(false);
+function ProductCard({ variant = 'ribbon', badgeText = 'NEW', item }) {
+
+
   const totalStars = 5;
   const {addToCart} = useCart()
+  const {toggleFavorites,favoritesItems} = useFavorites()
+  const [liked, setLiked] = useState(() => {
+    try {
+    
+        const existingFavorite = favoritesItems.find((i) => i.id === item.id)
+      return existingFavorite ? true :false
+    } catch {
+      return false
+    }
+  });
  
   const slugify = (text) => {
     if (!text) return ''; // text yoksa boş string dön
@@ -54,7 +62,7 @@ function ProductCard({
               className={`${styles.actionBtn} ${liked ? styles.liked : ''}`}
               aria-label="Like"
               aria-pressed={liked}
-              onClick={() => setLiked((v) => !v)}
+              onClick={() => {setLiked((v) => !v); toggleFavorites(item) }}
             >
               <img
                 className={styles.likeIcon}
@@ -67,17 +75,18 @@ function ProductCard({
               />
             </button>
 
-            <button
+            <a
               type="button"
               className={styles.actionBtn}
               aria-label="Search"
+              href={productUrl}
             >
               <img
                 className={styles.searchIcon}
                 src="/assets/icons/product/searchIcon.svg"
                 alt=""
               />
-            </button>
+            </a>
 
             <button
               type="button"
@@ -115,7 +124,7 @@ function ProductCard({
 
           <div className={styles.prices}>
             <span className={styles.discountPrice}>{item?.price}</span>
-            <span className={styles.originalPrice}>{item?.oldPrice}</span>
+           {item?.oldPrice !== 0 && <span className={styles.originalPrice}>{item?.oldPrice}</span>}
           </div>
         </div>
       </Link>
