@@ -3,7 +3,6 @@ import ShoppingCard from './shoppingCard';
 import Favorites from './favorites';
 import Search from './search';
 import Profile from './profile';
-import styles from '../navbar.module.scss';
 
 const Actions = () => {
   const [toggle, setToggle] = useState(null);
@@ -28,7 +27,15 @@ const Actions = () => {
   }, []);
 
   return (
-    <div className={styles.navIcons} ref={containerRef}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '20px',
+      }}
+      ref={containerRef}
+    >
       <Profile toggle={toggle} setToggle={setToggle} />
       <Search toggle={toggle} setToggle={setToggle} />
       <Favorites toggle={toggle} setToggle={setToggle} />
