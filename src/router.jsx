@@ -9,7 +9,7 @@ import Profile from './pages/profile';
 import { Blog } from './pages/Blog';
 import { Favorites } from './pages/Favorites';
 import CheckoutPage from './pages/checkout';
-import SingleProductPage from './pages/singleProduct';
+import SingleProductPage from './pages/SingleProduct';
 import Navbar from './Components/Navbar/Navbar.jsx';
 
 export const Router = () => {
