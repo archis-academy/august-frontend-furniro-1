@@ -22,7 +22,6 @@ const socialLinks = [
 ];
 
 const SingleProductDetails = ({ product }) => {
-  const { addToCart } = useCart();
 
   const {
     name,
@@ -39,7 +38,7 @@ const SingleProductDetails = ({ product }) => {
   const [selectedColor, setSelectedColor] = useState(
     colorOptions[0]?.name || '',
   );
-    const { cartItems, removeFromCart,decreaseQuantity, addToCart } = useCart();
+    const { cartItems,decreaseQuantity, addToCart } = useCart();
 
     const existingCart = cartItems.find((i) => i.id === product.id);
   
