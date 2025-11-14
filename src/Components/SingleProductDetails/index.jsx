@@ -22,6 +22,8 @@ const socialLinks = [
 ];
 
 const SingleProductDetails = ({ product }) => {
+  const { addToCart } = useCart();
+
   const {
     name,
     price,

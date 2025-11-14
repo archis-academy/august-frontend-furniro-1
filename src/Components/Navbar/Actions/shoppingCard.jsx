@@ -36,7 +36,7 @@ function ShoppingCard({ toggle, setToggle }) {
           <div className={styles.topSide}>
             <div className={styles.title}>
               Shopping Card ({cartItems.length})
-              <img src="assets/icons/navbar/lock.svg" alt="lock" />
+              <img src="/assets/icons/navbar/lock.svg" alt="lock" />
             </div>
             <hr className={styles.line}></hr>
 
@@ -51,7 +51,7 @@ function ShoppingCard({ toggle, setToggle }) {
                   <div className={styles.info}>
                     <div>{product.name}</div>
                     <div className={styles.price}>
-                      {product.quantity} x Rs. {parseFloat(product.price)?.toLocaleString('en-IN') || '0.00'}
+                      {product.quantity} x $ {parseFloat(product.price)?.toLocaleString('en-IN') || '0.00'}
                     </div>
                   </div>
                   <div
@@ -69,7 +69,7 @@ function ShoppingCard({ toggle, setToggle }) {
           <div className={styles.bottomSide}>
             <div className={styles.total}>
               <p>Subtotal</p>
-              <p className={styles.price}>Rs. {totalAmount.toLocaleString('en-IN', { minimumFractionDigits: 2 })}</p>
+              <p className={styles.price}> $ {totalAmount.toLocaleString('en-IN', { minimumFractionDigits: 2 })}</p>
             </div>
             <hr className={styles.line}></hr>
             <div className={styles.tabs}>
