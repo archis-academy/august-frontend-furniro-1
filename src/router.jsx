@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/main';
 import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
-import Navbar from './Components/navbar/Navbar.jsx';
 import Shop from './pages/Shop';
 import Footer from './Components/Footer';
 import Contact from './pages/Contact';
@@ -15,7 +14,7 @@ import SingleProductPage from './pages/singleProduct';
 export const Router = () => {
   return (
     <BrowserRouter>
-      <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
