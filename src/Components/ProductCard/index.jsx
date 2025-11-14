@@ -4,7 +4,6 @@ import styles from './ProductCard.module.scss';
 function ProductCard({
   variant = 'ribbon',
   badgeText = 'NEW',
-  rating = 4,
   item,
 }) {
   const [liked, setLiked] = useState(false);
