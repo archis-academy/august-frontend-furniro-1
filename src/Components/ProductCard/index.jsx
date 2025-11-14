@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import styles from './ProductCard.module.scss';
 import { useCart } from '../../context/CartContext';
 
-function ProductCard({ variant = 'ribbon', badgeText = 'NEW', item }) {
+function ProductCard({
+  variant = 'ribbon',
+  badgeText = 'NEW',
+  item,
+}) {
   const [liked, setLiked] = useState(false);
   const totalStars = 5;
   const {addToCart} = useCart()
