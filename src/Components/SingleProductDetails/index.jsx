@@ -1,3 +1,4 @@
+import { useCart } from '../../context/CartContext';
 import './singleproduct.scss';
 import { useState } from 'react';
 
@@ -36,12 +37,11 @@ const SingleProductDetails = ({ product }) => {
   const [selectedColor, setSelectedColor] = useState(
     colorOptions[0]?.name || '',
   );
-  const [qty, setQty] = useState(1);
+    const { cartItems, removeFromCart,decreaseQuantity, addToCart } = useCart();
 
-  const handleAdd = () => {
-    const payload = { product, qty, selectedColor };
-    onAddToCart ? onAddToCart(payload) : console.log('ADD_TO_CART', payload);
-  };
+    const existingCart = cartItems.find((i) => i.id === product.id);
+  
+
   return (
     <section className="pd-section">
       <h3>{name?.replace(/-/g, ' ')}</h3>
@@ -75,18 +75,18 @@ const SingleProductDetails = ({ product }) => {
       )}
       <div className="pd__actions">
         <div className="pd__qty">
-          <button onClick={() => setQty((q) => Math.max(1, q - 1))}>-</button>
+          <button disabled={existingCart?.quantity == 1}  onClick={() => decreaseQuantity(product)} >-</button>
           <input
             type="number"
             min="1"
-            value={qty}
-            onChange={(e) => setQty(Math.max(1, Number(e.target.value || 1)))}
+            value={existingCart?.quantity || 1}
+
             aria-label="Quantity"
           />
-          <button onClick={() => setQty((q) => q + 1)}>+</button>
+          <button onClick={() => addToCart(product)}>+</button>
         </div>
 
-        <button className="pd__btn" onClick={handleAdd}>
+        <button className="pd__btn" onClick={()=> addToCart(product)}>
           Add To Cart
         </button>
         <button

@@ -1,12 +1,17 @@
 import { Router } from './router';
 import './App.scss';
 import { CartProvider } from './context/CartContext';
+import { Toaster } from 'sonner';
+import { FavoritesProvider } from './context/FavoriteContext';
 
 function App() {
   return (
     <>
       <CartProvider>
-        <Router />
+        <FavoritesProvider>
+          <Router />
+          <Toaster richColors position="top-right" />
+        </FavoritesProvider>
       </CartProvider>
     </>
   );

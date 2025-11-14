@@ -46,7 +46,7 @@ function ShoppingCard({ toggle, setToggle }) {
               cartItems.map((product) => (
                 <div key={product.id} className={styles.productItem}>
                   <div className={styles.image}>
-                    <img src={product.images[0].url || "assets/icons/navbar/default.svg"} alt={product.name} />
+                    <img src={product.images[0]?.url || "assets/icons/navbar/default.svg"} alt={product.name} />
                   </div>
                   <div className={styles.info}>
                     <div>{product.name}</div>
