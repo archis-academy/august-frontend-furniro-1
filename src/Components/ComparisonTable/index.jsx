@@ -55,8 +55,8 @@ const data = {
 export default function ComparisonTable() {
   return (
     <div className={styles.tableContainer}>
-      {Object.entries(data).map(([section, items]) => (
-        <div key={section} className={styles.section}>
+      {Object.entries(data).map(([section, items, index]) => (
+        <div key={index} className={styles.section}>
           <h2 className={styles.sectionTitle}>{section}</h2>
           <div className={styles.rows}>
             {items.map((item) => (

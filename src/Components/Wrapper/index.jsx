@@ -90,7 +90,7 @@ function Wrapper() {
       >
         {slides.map((slide, index) => (
           // Artık large/small class'ları yok!
-          <div key={slide.id} ref={slideRefs.current[index]} className={styles.slide}>
+          <div key={index} ref={slideRefs.current[index]} className={styles.slide}>
             <img
               src={slide.image}
               alt={slide.title}

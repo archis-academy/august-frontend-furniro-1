@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './ProductCard.module.scss';
+import { useCart } from '../../context/CartContext';
 
 function ProductCard({
   variant = 'ribbon',
@@ -8,7 +10,20 @@ function ProductCard({
 }) {
   const [liked, setLiked] = useState(false);
   const totalStars = 5;
-
+  const {addToCart} = useCart()
+ 
+  const slugify = (text) => {
+    if (!text) return ''; // text yoksa boş string dön
+    return text
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-') // Boşlukları - ile değiştir
+      .replace(/[^\w-]+/g, '') // Geçersiz karakterleri (ç,ö,ü, vb.) kaldır
+      .replace(/--+/g, '-'); // Birden fazla -- varsa tek - yap
+  };
+  const productNameUrl = slugify(item?.name);
+  const productUrl = `/shop/${productNameUrl}?id=${item?.id}`;
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imageWrapper}>
@@ -28,8 +43,7 @@ function ProductCard({
             className={styles.image}
             src={item?.images[0]?.url}
             onError={(e) => {
-              e.currentTarget.src =
-              item?.images[1]?.url; 
+              e.currentTarget.src = item?.images[1]?.url;
             }}
             alt="Syltherine"
           />
@@ -68,7 +82,7 @@ function ProductCard({
             <button
               type="button"
               className={styles.actionBtn}
-              aria-label="Add to cart"
+              onClick={()=> addToCart(item)}
             >
               <img
                 className={styles.shopIcon}
@@ -79,31 +93,32 @@ function ProductCard({
           </div>
         </div>
       </div>
+      <Link to={productUrl} key={item?.id} className={styles.productLink}>
+        <div className={styles.productDetails}>
+          <div className={styles.productName}>{item?.name}</div>
+          <div className={styles.productDesc}>
+            {item?.description.slice(0, 30)}...
+          </div>
 
-      <div className={styles.productDetails}>
-        <div className={styles.productName}>{item?.name}</div>
-        <div className={styles.productDesc}>
-          {item?.description.slice(0, 30)}...
-        </div>
+          <div className={styles.productStars}>
+            {Array.from({ length: totalStars }, (_, i) => (
+              <span
+                key={i}
+                className={
+                  i < item.rating.stars ? styles.starFilled : styles.starEmpty
+                }
+              >
+                ★
+              </span>
+            ))}
+          </div>
 
-        <div className={styles.productStars}>
-          {Array.from({ length: totalStars }, (_, i) => (
-            <span
-              key={i}
-              className={
-                i < item.rating.stars ? styles.starFilled : styles.starEmpty
-              }
-            >
-              ★
-            </span>
-          ))}
+          <div className={styles.prices}>
+            <span className={styles.discountPrice}>{item?.price}</span>
+            <span className={styles.originalPrice}>{item?.oldPrice}</span>
+          </div>
         </div>
-
-        <div className={styles.prices}>
-          <span className={styles.discountPrice}>{item?.price}</span>
-          <span className={styles.originalPrice}>{item?.oldPrice}</span>
-        </div>
-      </div>
+      </Link>
     </div>
   );
 }

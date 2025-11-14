@@ -1,15 +1,25 @@
-Artık API'niz Hazır!
+Ürün İstekleri (/products)
 
-Tüm Ürünleri Getir: http://localhost:3004/products
+Tüm Ürünleri Getir: https://furniro-api-vd0v.onrender.com/products
 
-Tek Bir Ürünün Detayını Getir: http://localhost:3004/products/1
+Tek Bir Ürünün Detayını Getir: (Örnek olarak id'si 1 olan ürünü getir) https://furniro-api-vd0v.onrender.com/products/1
 
-Kategoriye Göre Filtrele: http://localhost:3004/products?category=Living Room
+Kategoriye Göre Filtrele: (Örnek olarak sadece "Sofas" kategorisindekileri getir) https://furniro-api-vd0v.onrender.com/products?category=Sofas
 
-Fiyata Göre Sırala: http://localhost:3004/products?_sort=price&_order=asc
+Fiyata Göre Sırala: (En ucuzdan en pahalıya doğru sırala) https://furniro-api-vd0v.onrender.com/products?_sort=price&_order=asc
 
-Sayfalama: http://localhost:3004/products?_page=1&_limit=8
+Sayfalama: (Sadece ilk sayfadaki 8 ürünü getir - Shop sayfası için harika) https://furniro-api-vd0v.onrender.com/products?_page=1&_limit=8
 
-Blog Yazılarını Getir: http://localhost:3004/blogs
+Yeni Ürünleri Getir: (Sadece isNew değeri true olanları getir) https://furniro-api-vd0v.onrender.com/products?isNew=true
 
-Benzer Ürünler: Bir ürünün detay sayfasındayken, o ürünün kategorisindeki diğer ürünleri getirmek için yine filtrelemeyi kullanabilirsiniz: http://localhost:3004/products?category=Living Room&id_ne=1 (Kategorisi "Living Room" olan ama id'si 1 olmayanları getir).
+Arama Yapma: (Adında "sofa" kelimesi geçen ürünleri ara) https://furniro-api-vd0v.onrender.com/products?name_like=sofa
+
+Benzer Ürünler (Ürün Detay Sayfası İçin): Diyelim ki id'si 1 olan "asgaard-sofa" ürününün sayfasındasın ve bu ürünün kategorisi "Sofas". Bu ürün hariç, aynı kategorideki diğer ürünleri getirmek için: https://furniro-api-vd0v.onrender.com/products?category=Sofas&id_ne=1 (Anlamı: Kategorisi "Sofas" olan ama id'si 1 olmayanları (ne = not equal) getir.)
+
+2. Blog İstekleri (/blogs)
+
+Tüm Blog Yazılarını Getir: https://furniro-api-vd0v.onrender.com/blogs
+
+Tek Bir Blog Yazısını Getir: (Örnek olarak id'si 1 olan yazıyı getir) https://furniro-api-vd0v.onrender.com/blogs/1
+
+Blog Kategorisine Göre Filtrele: (Sadece "Wood" kategorisindeki yazıları getir) https://furniro-api-vd0v.onrender.com/blogs?category=Wood
