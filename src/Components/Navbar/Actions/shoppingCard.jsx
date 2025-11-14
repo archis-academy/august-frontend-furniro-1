@@ -7,7 +7,7 @@ function ShoppingCard({ toggle, setToggle }) {
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => {
       const price = item.price || 0;
-      return total + (price * item.quantity);
+      return total + price * item.quantity;
     }, 0);
   };
 
@@ -20,7 +20,9 @@ function ShoppingCard({ toggle, setToggle }) {
         alt="Basket icon"
         onClick={(e) => {
           e.stopPropagation();
-          toggle === "shoppingCard" ? setToggle(null) : setToggle("shoppingCard");
+          toggle === 'shoppingCard'
+            ? setToggle(null)
+            : setToggle('shoppingCard');
         }}
       />
 
@@ -28,11 +30,8 @@ function ShoppingCard({ toggle, setToggle }) {
         <span className={styles.cartCount}>{cartItems.length}</span>
       )}
 
-      {toggle === "shoppingCard" && (
-        <div
-          className={styles.container}
-          onClick={(e) => e.stopPropagation()}
-        >
+      {toggle === 'shoppingCard' && (
+        <div className={styles.container} onClick={(e) => e.stopPropagation()}>
           <div className={styles.topSide}>
             <div className={styles.title}>
               Shopping Card ({cartItems.length})
@@ -41,17 +40,28 @@ function ShoppingCard({ toggle, setToggle }) {
             <hr className={styles.line}></hr>
 
             {cartItems.length === 0 ? (
-              <div className={styles.emptyCart}>Sepetinizde ürün bulunmamaktadır.</div>
+              <div className={styles.emptyCart}>
+                Sepetinizde ürün bulunmamaktadır.
+              </div>
             ) : (
               cartItems.map((product) => (
                 <div key={product.id} className={styles.productItem}>
                   <div className={styles.image}>
-                    <img src={product.images[0]?.url || "assets/icons/navbar/default.svg"} alt={product.name} />
+                    <img
+                      src={product.images[0]?.url}
+                      onError={(e) => {
+                        e.currentTarget.src =
+                          '/assets/images/category-card/broken-image.png';
+                      }}
+                      alt={product.name}
+                    />
                   </div>
                   <div className={styles.info}>
                     <div>{product.name}</div>
                     <div className={styles.price}>
-                      {product.quantity} x $ {parseFloat(product.price)?.toLocaleString('en-IN') || '0.00'}
+                      {product.quantity} x ${' '}
+                      {parseFloat(product.price)?.toLocaleString('en-IN') ||
+                        '0.00'}
                     </div>
                   </div>
                   <div
@@ -63,13 +73,18 @@ function ShoppingCard({ toggle, setToggle }) {
                 </div>
               ))
             )}
-
           </div>
 
           <div className={styles.bottomSide}>
             <div className={styles.total}>
               <p>Subtotal</p>
-              <p className={styles.price}> $ {totalAmount.toLocaleString('en-IN', { minimumFractionDigits: 2 })}</p>
+              <p className={styles.price}>
+                {' '}
+                ${' '}
+                {totalAmount.toLocaleString('en-IN', {
+                  minimumFractionDigits: 2,
+                })}
+              </p>
             </div>
             <hr className={styles.line}></hr>
             <div className={styles.tabs}>

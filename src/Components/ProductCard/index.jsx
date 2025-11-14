@@ -51,7 +51,7 @@ function ProductCard({ variant = 'ribbon', badgeText = 'NEW', item }) {
             className={styles.image}
             src={item?.images[0]?.url}
             onError={(e) => {
-              e.currentTarget.src = item?.images[1]?.url;
+              e.currentTarget.src = "/assets/images/category-card/broken-image.png";
             }}
             alt="Syltherine"
           />
