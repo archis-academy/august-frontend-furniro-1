@@ -10,12 +10,12 @@ import { Blog } from './pages/Blog';
 import { Favorites } from './pages/Favorites';
 import CheckoutPage from './pages/checkout';
 import SingleProductPage from './pages/SingleProduct';
-import Navbar from './Components/Navbar/Navbar.jsx';
+import Header from './Components/Header/Header';
 
 export const Router = () => {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
