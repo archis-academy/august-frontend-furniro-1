@@ -6,15 +6,16 @@ import Shop from './pages/Shop';
 import Footer from './Components/Footer';
 import Contact from './pages/Contact';
 import Profile from './pages/profile';
-import { Blog } from './pages/blog';
+import { Blog } from './pages/Blog';
 import { Favorites } from './pages/Favorites';
 import CheckoutPage from './pages/checkout';
 import SingleProductPage from './pages/singleProduct';
+import Navbar from './Components/Navbar/Navbar.jsx';
 
 export const Router = () => {
   return (
     <BrowserRouter>
-
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
