@@ -48,7 +48,7 @@ function OurProductSection({ showTitle = true }) {
         <aside className={styles.sidePart}>
           <div className={styles.container}>
             <Filters />
-            <BestSellersList />
+            <BestSellersList products={products} />
           </div>
         </aside>
         <div className={styles.btnWrapper}>
