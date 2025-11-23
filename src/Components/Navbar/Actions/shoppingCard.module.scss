@@ -1,27 +1,54 @@
-
 .container {
   width: 417px;
-  height: 741px;
+  max-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-family: 'Poppins', sans-serif;
   position: absolute;
-  top: calc(100% + 5px); 
-  right: 0; 
+  top: calc(100% + 5px);
+  right: 0;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   z-index: 1000;
   background-color: white;
 }
+
+.topSide {
+  max-height: 450px;
+  overflow-y: auto;
+  padding-right: 20px;
+}
+.cartCount {
+  position: absolute;
+  top: 15px;
+  right: -10px;
+  background-color: #B88E2F;
+  color: white;
+  border-radius: 100%;
+  font-size: 13px;
+  min-width: 16px;
+  height: 16px;
+  padding: 1px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
 .icon {
   cursor: pointer;
   position: relative;
   display: inline-block;
-  margin:10px;
+  margin: 10px;
 }
+
+.productItem {
+  display: flex;
+  justify-content: space-around;
+}
+
 .tab {
   border: 1px solid #3a3a3a;
   border-radius: 25px;
@@ -30,53 +57,58 @@
   font-size: 12px;
   background-color: white;
 }
+
 .title {
   font-size: 24px;
   font-weight: 600;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
-.product1,
-.product2 {
-  display: flex;
-  justify-content:space-between;
-  margin:20px;
-}
+
 .tabs {
   display: flex;
   justify-content: space-between;
 }
-.info{
+
+.info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:10px;
+  gap: 10px;
 }
-.bottomSide{
-  margin:25px;
+
+.bottomSide {
+  margin: 25px;
 }
-.line{
-  border: none;               
-  border-top: 1px solid #ACACAC; 
-  margin: 25px 0;             
-  display: block;  
+
+.line {
+  border: none;
+  border-top: 1px solid #ACACAC;
+  margin: 25px 0;
+  display: block;
 }
-.total{
+
+.total {
   display: flex;
   justify-content: space-between;
 }
-.topSide{
-  margin:25px;
+
+.topSide {
+  margin: 25px;
 }
-.price{
-  color:#B88E2F;
+
+.price {
+  color: #B88E2F;
 }
-.vector{
+
+.vector {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.image img{
-  background-color: #D9D9D9;
-  border-radius:10px;
+
+.image img {
+  width: 100px;
+  height: 90px;
+  border-radius: 10px;
 }

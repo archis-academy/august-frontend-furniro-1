@@ -2,21 +2,20 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/main';
 import { SignUp } from './pages/SignUp';
 import Login from './pages/login';
-import SingleProduct from './pages/singleProduct';
-import Navbar from './Components/Navbar/navbar';
 import Shop from './pages/Shop';
 import Footer from './Components/Footer';
 import Contact from './pages/Contact';
 import Profile from './pages/profile';
-import { Blog } from './pages/blog';
+import { Blog } from './pages/Blog';
 import { Favorites } from './pages/Favorites';
 import CheckoutPage from './pages/checkout';
-import SingleProductPage from './pages/singleProduct';
+import SingleProductPage from './pages/SingleProduct';
+import Header from './Components/Header/Header';
 
 export const Router = () => {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
@@ -31,7 +30,6 @@ export const Router = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/favorites" element={<Favorites />} />
-        <Route path="/shop/:product_title" element={<SingleProduct />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
