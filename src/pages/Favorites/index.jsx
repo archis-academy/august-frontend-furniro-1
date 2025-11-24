@@ -5,6 +5,7 @@ import PageHeader from '../../Components/PageHeader';
 import FeaturesSection from '../../Components/FeaturesSection';
 import { FavoritesProducts } from '../../Components/FavoritesProducts';
 import { useFavorites } from '../../context/FavoriteContext';
+import Buttons from '../../Components/Button/button';
 
 export const Favorites = () => {
   const { favoritesItems, toggleFavorites } = useFavorites();
@@ -15,9 +16,11 @@ export const Favorites = () => {
 
       <div className={styles.favoritesList}>
         {favoritesItems.length === 0 ? (
-          <p className={styles.emptyText}>
-            Henüz favori ürününüz bulunmamaktadır.
-          </p>
+          <div className={styles.emptyFavorites}>
+          <p className={styles.emptyText}>No favorite products yet.</p>
+          <Buttons text="Discover Our Products" onClick={() => window.location.href = '/shop'} />
+          </div>
+
         ) : (
           favoritesItems.map((item) => {
             const firstImageObj = item.images?.[0];

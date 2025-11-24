@@ -1,23 +1,9 @@
+import { useFavorites } from '../../../context/FavoriteContext';
 import styles from './favorites.module.scss';
 import { useNavigate } from 'react-router-dom';
 
 function Favorites({ toggle, setToggle }) {
-  const products = [
-    { id: 1, title: 'Asgaard Sofa', image: 'assets/icons/navbar/sofa.svg' },
-    { id: 2, title: 'Casaliving Wood', image: 'assets/icons/navbar/table.svg' },
-    { id: 3, title: 'Casaliving Wood', image: 'assets/icons/navbar/wood.svg' },
-    { id: 4, title: 'Asgaard Sofa', image: 'assets/icons/navbar/sofa.svg' },
-    { id: 5, title: 'Casaliving Wood', image: 'assets/icons/navbar/wood.svg' },
-    { id: 6, title: 'Asgaard Sofa', image: 'assets/icons/navbar/sofa.svg' },
-    { id: 7, title: 'Casaliving Wood', image: 'assets/icons/navbar/table.svg' },
-    { id: 8, title: 'Casaliving Wood', image: 'assets/icons/navbar/wood.svg' },
-    { id: 9, title: 'Asgaard Sofa', image: 'assets/icons/navbar/sofa.svg' },
-    {
-      id: 10,
-      title: 'Casaliving Wood',
-      image: 'assets/icons/navbar/table.svg',
-    },
-  ];
+  const { favoritesItems, toggleFavorites } = useFavorites();
   const navigate = useNavigate();
 
   return (
@@ -41,15 +27,27 @@ function Favorites({ toggle, setToggle }) {
           <hr className={styles.line}></hr>
 
           <div className={styles.scrollArea}>
-            {products.map((product) => (
+            {favoritesItems.length === 0 && (
+              <p className={styles.emptyText}>No favorite products yet.</p>
+            )}
+
+            {favoritesItems.slice(0, 4).map((product) => (
               <div className={styles.product1} key={product.id}>
                 <div className={styles.image}>
-                  <img src={product.image} alt="product" />
+                  <img
+                    src={product.images[0].url}
+                    alt="product"
+                    width={105}
+                    height={105}
+                  />
                 </div>
                 <div className={styles.info}>
-                  <div>{product.title}</div>
+                  <div>{product.name}</div>
                 </div>
-                <div className={styles.vector}>
+                <div
+                  className={styles.vector}
+                  onClick={() => toggleFavorites(product)}
+                >
                   <img src="/assets/icons/navbar/vector.svg" alt="remove" />
                 </div>
               </div>
@@ -61,10 +59,10 @@ function Favorites({ toggle, setToggle }) {
           <div className={styles.tabs}>
             <p
               className={styles.tab}
-              onClick={() => navigate('/Favorites')}
+              onClick={() => navigate(favoritesItems?.length === 0 ?   '/shop' : '/favorites' )}
               role="button"
             >
-              See More
+              {favoritesItems?.length === 0 ? 'Discover Our Products' : 'See More'  }
             </p>
           </div>
         </div>

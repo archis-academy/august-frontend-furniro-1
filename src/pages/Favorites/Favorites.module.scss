@@ -6,6 +6,7 @@
   flex-direction: column;
   gap: 80px;
   padding: 80px 140px;
+
   .favoritesList {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -14,5 +15,20 @@
       grid-template-columns: 1fr;
       gap: 20px;
     }
+  }
+
+  .emptyFavorites {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .emptyText {
+    font-family: i.$font-family-base;
+    font-size: 20px;
+    color: i.$dark;
+    text-align: center;
   }
 }
