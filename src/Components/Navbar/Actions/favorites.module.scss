@@ -1,7 +1,8 @@
 
 .container {
   width: 417px;
-  height: 741px;
+  height: fit-content;
+  max-height: 740px;
   display: flex;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;

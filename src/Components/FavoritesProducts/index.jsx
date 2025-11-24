@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FavoritesProducts.module.scss';
 
-export const FavoritesProducts = ({ image, name, price }) => {
+export const FavoritesProducts = ({ image, name, price, onRemove }) => {
   return (
     <>
       <div className={styles.container}>
@@ -10,7 +10,10 @@ export const FavoritesProducts = ({ image, name, price }) => {
         </div>
         <span className={styles.name}>{name}</span>
         <span className={styles.price}>{price}</span>
-        <img src="/assets/icons/favorites/delete_icon.svg" alt="delete" />
+
+        <button className={styles.deleteButton} onClick={onRemove}>
+          <img src="/assets/icons/favorites/delete_icon.svg" alt="delete" />
+        </button>
       </div>
     </>
   );

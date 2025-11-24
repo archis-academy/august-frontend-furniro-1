@@ -15,7 +15,7 @@ import Header from './Components/Header/Header';
 export const Router = () => {
   return (
     <BrowserRouter>
-      <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
