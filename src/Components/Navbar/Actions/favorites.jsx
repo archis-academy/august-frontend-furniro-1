@@ -1,4 +1,5 @@
 import styles from './favorites.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 function Favorites({ toggle, setToggle }) {
   const products = [
@@ -11,8 +12,13 @@ function Favorites({ toggle, setToggle }) {
     { id: 7, title: 'Casaliving Wood', image: 'assets/icons/navbar/table.svg' },
     { id: 8, title: 'Casaliving Wood', image: 'assets/icons/navbar/wood.svg' },
     { id: 9, title: 'Asgaard Sofa', image: 'assets/icons/navbar/sofa.svg' },
-    { id: 10, title: 'Casaliving Wood', image: 'assets/icons/navbar/table.svg' },
+    {
+      id: 10,
+      title: 'Casaliving Wood',
+      image: 'assets/icons/navbar/table.svg',
+    },
   ];
+  const navigate = useNavigate();
 
   return (
     <div className={styles.icon}>
@@ -20,18 +26,15 @@ function Favorites({ toggle, setToggle }) {
         src="/assets/icons/navbar/like.svg"
         alt="like icon"
         onClick={(e) => {
-          e.stopPropagation(); 
-          toggle === "favorites" ? setToggle(null) : setToggle("favorites");
+          e.stopPropagation();
+          toggle === 'favorites' ? setToggle(null) : setToggle('favorites');
         }}
       />
 
-      {toggle === "favorites" && (
-        <div
-          className={styles.container}
-          onClick={(e) => e.stopPropagation()} 
-        >
+      {toggle === 'favorites' && (
+        <div className={styles.container} onClick={(e) => e.stopPropagation()}>
           <div className={styles.title}>
-            Shopping Card
+            Favorites Card
             <img src="/assets/icons/navbar/lock.svg" alt="lock" />
           </div>
 
@@ -56,7 +59,13 @@ function Favorites({ toggle, setToggle }) {
           <hr className={styles.line}></hr>
 
           <div className={styles.tabs}>
-            <p className={styles.tab}>See More</p>
+            <p
+              className={styles.tab}
+              onClick={() => navigate('/Favorites')}
+              role="button"
+            >
+              See More
+            </p>
           </div>
         </div>
       )}

@@ -1,6 +1,18 @@
+@use '../../styles/variables' as i;
+
 .container {
   width: 99vw;
   display: flex;
   flex-direction: column;
   gap: 80px;
+  padding: 80px 140px;
+  .favoritesList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    @media (max-width: i.$desktop-m) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
 }
